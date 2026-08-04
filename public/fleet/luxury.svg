@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="RS Travel Luxury Sedan Cab">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0c0a09"/>
+      <stop offset="1" stop-color="#1c1917"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.35" r="0.7">
+      <stop offset="0" stop-color="#e879f9" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#e879f9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="car" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f5d0fe"/>
+      <stop offset="0.5" stop-color="#c026d3"/>
+      <stop offset="1" stop-color="#701a75"/>
+    </linearGradient>
+    <linearGradient id="win" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf5ff"/>
+      <stop offset="1" stop-color="#f0abfc"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect width="800" height="500" fill="url(#glow)"/>
+  <g opacity="0.06" stroke="#a8a29e" stroke-width="1">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+  </g>
+  <ellipse cx="400" cy="432" rx="300" ry="18" fill="#000" opacity="0.5"/>
+  <g>
+    <path d="M150 382 L132 358 Q124 332 160 325 L250 302 Q302 288 354 284 L472 276 Q544 273 594 287 Q646 301 660 322 Q672 344 662 362 L656 378 Q652 387 642 387 L170 387 Q156 387 150 382 Z" fill="url(#car)"/>
+    <path d="M310 292 L344 268 Q374 254 432 254 L522 260 Q562 266 576 294 L310 294 Z" fill="url(#win)" opacity="0.9"/>
+    <path d="M300 292 L322 274 L362 256 Q338 262 310 280 Z" fill="url(#win)" opacity="0.55"/>
+    <circle cx="232" cy="388" r="46" fill="#0f172a"/>
+    <circle cx="232" cy="388" r="22" fill="#d6d3d1"/>
+    <circle cx="232" cy="388" r="10" fill="#fafaf9"/>
+    <circle cx="562" cy="388" r="46" fill="#0f172a"/>
+    <circle cx="562" cy="388" r="22" fill="#d6d3d1"/>
+    <circle cx="562" cy="388" r="10" fill="#fafaf9"/>
+    <rect x="480" y="286" width="16" height="12" rx="3" fill="#fdf4ff" opacity="0.9"/>
+    <rect x="502" y="288" width="16" height="12" rx="3" fill="#fdf4ff" opacity="0.9"/>
+  </g>
+  <text x="400" y="468" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800" fill="#fbbf24" letter-spacing="6">RS TRAVEL LUXURY</text>
+</svg>

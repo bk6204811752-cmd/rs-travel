@@ -1,0 +1,16 @@
+{
+  "name": "RS Travel — Taxi | Cab Service",
+  "short_name": "RS Travel",
+  "icons": [
+    {
+      "src": "/logo.webp",
+      "sizes": "any",
+      "type": "image/webp"
+    }
+  ],
+  "theme_color": "#f59e0b",
+  "background_color": "#020617",
+  "display": "standalone",
+  "start_url": "/",
+  "description": "Book reliable AC cabs in Jamshedpur (Sonari), Ranchi & Jharkhand 24/7. Call +917979877450."
+}
