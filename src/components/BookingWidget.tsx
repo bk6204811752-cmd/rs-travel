@@ -63,6 +63,28 @@ export default function BookingWidget({ defaultFrom = '', defaultTo = '', cityNa
       'tempo': 'Tempo Traveller'
     };
     
+    // Send dual background POST to deployed Google Apps Script Web App URL
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycby1dsCy26pkzWN5UyXCot1QN1-WDZLmIVpDN1M3ASAhvdDe5MRoY2LePRIipj7AJGj2Dg/exec';
+    try {
+      fetch(scriptUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          tripType: tripTypeMap[activeTab] || 'One Way',
+          cabType: cabTypeMap[cabType] || 'Sedan',
+          from,
+          to,
+          date,
+          time,
+          name,
+          phone
+        })
+      }).catch(() => {});
+    } catch {
+      // ignore network errors
+    }
+
     // Create a dynamic hidden iframe and form to bypass opaque fetch restrictions
     const iframeName = 'hidden_iframe_' + Date.now();
     const iframe = document.createElement('iframe');
