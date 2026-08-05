@@ -13,6 +13,7 @@ import SchemaMarkup from '@/components/SchemaMarkup';
 import HeroSlider from '@/components/HeroSlider';
 import BlogSection from '@/components/BlogSection';
 import FareCalculator from '@/components/FareCalculator';
+import BannerBookingPanel from '@/components/BannerBookingPanel';
 
 // ============================================================
 // ROUTE MATCHING
@@ -420,7 +421,15 @@ function CityHubPage({ citySlug }: { citySlug: string }) {
     <div className="page-content">
       <SchemaMarkup type="city" data={{ areaServed: `${city.name}, Jharkhand`, cityName: city.name, postalCode: city.pincode, latitude: city.latitude, longitude: city.longitude, faqs, reviews: city.reviews, reviewCount: String(city.reviews.length), breadcrumbs: [{ name: 'Home', url: '/' }, { name: 'Jharkhand', url: '/' }, { name: `Cab Service ${city.name}`, url: `/cab-service-${city.slug}` }] }} />
 
-      <section className="hero-section">
+      {/* 1. BANNER BOOKING PANEL (Directly below Header) */}
+      <div style={{ paddingTop: '1rem', paddingBottom: '0.5rem' }}>
+        <div className="container-main">
+          <BannerBookingPanel />
+        </div>
+      </div>
+
+      {/* 2. NAV BANNER WITH HERO SLIDER, TEXT & CTAS */}
+      <section className="hero-section" style={{ minHeight: 'auto', paddingTop: '2rem', paddingBottom: '3rem' }}>
         <HeroSlider />
         <div className="container-main" style={{ position: 'relative', zIndex: 1 }}>
           <Breadcrumb items={[
@@ -438,15 +447,16 @@ function CityHubPage({ citySlug }: { citySlug: string }) {
                 Book 24/7 | +91 79798 77450 | AC Cabs from ₹{city.localFare.hatchback_4hr}
               </span>
             </h1>
+            <div className="hero-btn-group">
+              <a href="tel:+917979877450" className="btn-primary">📞 Call: +91 79798 77450</a>
+              <a href={`https://wa.me/917979877450?text=Hi%20RS%20Travel%2C%20I%20want%20to%20book%20a%20cab%20in%20${city.name}`} target="_blank" rel="noopener noreferrer" className="btn-whatsapp pulse-animation">💬 WhatsApp Booking</a>
+            </div>
           </div>
-        </div>
-      </section>
 
-      <div className="hero-booking-wrapper">
-        <div className="container-main">
+          {/* 3. BOOKING WIDGET (WHITE FORM BELOW HERO BANNER) */}
           <BookingWidget defaultFrom={city.name} cityName={city.name} />
         </div>
-      </div>
+      </section>
 
       <div className="container-main">
         {/* Long-form Content Block — Critical for SEO ranking */}
@@ -814,7 +824,16 @@ function ServiceInCityPage({ citySlug, serviceSlug }: { citySlug: string; servic
   return (
     <div className="page-content">
       <SchemaMarkup type="service" data={{ areaServed: `${city.name}, Jharkhand`, faqs, reviews: city.reviews, serviceName: service.name, serviceDescription: service.description, price: String(service.startingPrice), priceUnit: service.priceUnit, breadcrumbs: [{ name: 'Home', url: '/' }, { name: `Cab ${city.name}`, url: `/cab-service-${city.slug}` }, { name: service.name, url: `/${city.slug}/${service.slug}` }] }} />
-      <section className="hero-section">
+
+      {/* 1. BANNER BOOKING PANEL (Directly below Header) */}
+      <div style={{ paddingTop: '1rem', paddingBottom: '0.5rem' }}>
+        <div className="container-main">
+          <BannerBookingPanel />
+        </div>
+      </div>
+
+      {/* 2. NAV BANNER WITH HERO SLIDER, TEXT & CTAS */}
+      <section className="hero-section" style={{ minHeight: 'auto', paddingTop: '2rem', paddingBottom: '3rem' }}>
         <HeroSlider />
         <div className="container-main" style={{ position: 'relative', zIndex: 1 }}>
           <Breadcrumb items={[
@@ -822,18 +841,21 @@ function ServiceInCityPage({ citySlug, serviceSlug }: { citySlug: string; servic
             { label: `Cab ${isJSR ? 'Jamshedpur/Tata' : city.name}`, href: `/cab-service-${city.slug}` },
             { label: `${service.name}` },
           ]} />
-          <h1 style={{ marginBottom: '1rem' }}>
-            <span className="gold-text">{service.name} in {displayCityName}</span><br />
-            <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', color: '#e2e8f0', fontWeight: 600 }}>+91 79798 77450 | ₹{service.startingPrice} {service.priceUnit}</span>
-          </h1>
-        </div>
-      </section>
+          <div style={{ marginBottom: '2rem' }}>
+            <h1 style={{ marginBottom: '1rem' }}>
+              <span className="gold-text">{service.name} in {displayCityName}</span><br />
+              <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', color: '#e2e8f0', fontWeight: 600 }}>+91 79798 77450 | ₹{service.startingPrice} {service.priceUnit}</span>
+            </h1>
+            <div className="hero-btn-group">
+              <a href="tel:+917979877450" className="btn-primary">📞 Call: +91 79798 77450</a>
+              <a href={`https://wa.me/917979877450?text=Hi%20RS%20Travel%2C%20I%20want%20${service.name}%20in%20${city.name}`} target="_blank" rel="noopener noreferrer" className="btn-whatsapp pulse-animation">💬 Book on WhatsApp</a>
+            </div>
+          </div>
 
-      <div className="hero-booking-wrapper">
-        <div className="container-main">
+          {/* 3. BOOKING WIDGET (WHITE FORM BELOW HERO BANNER) */}
           <BookingWidget defaultFrom={city.name} cityName={city.name} />
         </div>
-      </div>
+      </section>
 
       <div className="container-main section-spacing">
         <div className="content-block">
@@ -954,7 +976,16 @@ function FleetInCityPage({ citySlug, fleetSlug }: { citySlug: string; fleetSlug:
   return (
     <div className="page-content">
       <SchemaMarkup type="fleet" data={{ areaServed: `${city.name}, Jharkhand`, faqs, reviews: city.reviews, vehicleName: vehicle.shortName, vehicleDescription: vehicle.description, vehicleImage: vehicle.image, price: String(vehicle.perKmRate), seatingCapacity: vehicle.seatingCapacity, breadcrumbs: [{ name: 'Home', url: '/' }, { name: `Cab ${city.name}`, url: `/cab-service-${city.slug}` }, { name: vehicle.shortName, url: `/${city.slug}/${vehicle.slug}` }] }} />
-      <section className="hero-section">
+
+      {/* 1. BANNER BOOKING PANEL (Directly below Header) */}
+      <div style={{ paddingTop: '1rem', paddingBottom: '0.5rem' }}>
+        <div className="container-main">
+          <BannerBookingPanel />
+        </div>
+      </div>
+
+      {/* 2. NAV BANNER WITH HERO SLIDER, TEXT & CTAS */}
+      <section className="hero-section" style={{ minHeight: 'auto', paddingTop: '2rem', paddingBottom: '3rem' }}>
         <HeroSlider />
         <div className="container-main" style={{ position: 'relative', zIndex: 1 }}>
           <Breadcrumb items={[
@@ -962,18 +993,21 @@ function FleetInCityPage({ citySlug, fleetSlug }: { citySlug: string; fleetSlug:
             { label: `Cab ${isJSR ? 'Jamshedpur/Tata' : city.name}`, href: `/cab-service-${city.slug}` },
             { label: vehicle.shortName },
           ]} />
-          <h1 style={{ marginBottom: '1rem' }}>
-            <span className="gold-text">{vehicle.name} in {displayCityName}</span><br />
-            <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', color: '#e2e8f0', fontWeight: 600 }}>Book Now +91 79798 77450 | ₹{vehicle.perKmRate}/km</span>
-          </h1>
-        </div>
-      </section>
+          <div style={{ marginBottom: '2rem' }}>
+            <h1 style={{ marginBottom: '1rem' }}>
+              <span className="gold-text">{vehicle.name} in {displayCityName}</span><br />
+              <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', color: '#e2e8f0', fontWeight: 600 }}>Book Now +91 79798 77450 | ₹{vehicle.perKmRate}/km</span>
+            </h1>
+            <div className="hero-btn-group">
+              <a href="tel:+917979877450" className="btn-primary">📞 Call: +91 79798 77450</a>
+              <a href={`https://wa.me/917979877450?text=Hi%20RS%20Travel%2C%20I%20want%20to%20hire%20${vehicle.name}%20in%20${city.name}`} target="_blank" rel="noopener noreferrer" className="btn-whatsapp pulse-animation">💬 Book on WhatsApp</a>
+            </div>
+          </div>
 
-      <div className="hero-booking-wrapper">
-        <div className="container-main">
+          {/* 3. BOOKING WIDGET (WHITE FORM BELOW HERO BANNER) */}
           <BookingWidget defaultFrom={city.name} cityName={city.name} />
         </div>
-      </div>
+      </section>
 
       <div className="container-main section-spacing">
         <div className="content-block">
@@ -1108,7 +1142,15 @@ function OutstationRoutePage({ from, to }: { from: string; to: string }) {
     <div className="page-content">
       <SchemaMarkup type="route" data={{ from: route.fromName, to: route.toName, distance: route.distanceKm, fare: route.fares.hatchback, areaServed: `${route.fromName} to ${route.toName}`, faqs, reviews: fromCity?.reviews, reviewCount: String(fromCity?.reviews?.length || 3), breadcrumbs: [{ name: 'Home', url: '/' }, { name: `Cab ${route.fromName}`, url: `/cab-service-${route.from}` }, { name: `${route.fromName} to ${route.toName}`, url: `/${route.from}-to-${route.to}-cab` }] }} />
 
-      <section className="hero-section">
+      {/* 1. BANNER BOOKING PANEL (Directly below Header) */}
+      <div style={{ paddingTop: '1rem', paddingBottom: '0.5rem' }}>
+        <div className="container-main">
+          <BannerBookingPanel />
+        </div>
+      </div>
+
+      {/* 2. NAV BANNER WITH HERO SLIDER, TEXT & CTAS */}
+      <section className="hero-section" style={{ minHeight: 'auto', paddingTop: '2rem', paddingBottom: '3rem' }}>
         <HeroSlider />
         <div className="container-main" style={{ position: 'relative', zIndex: 1 }}>
           <Breadcrumb items={[
@@ -1116,18 +1158,21 @@ function OutstationRoutePage({ from, to }: { from: string; to: string }) {
             { label: `Cab ${shortFromName}`, href: `/cab-service-${route.from}` },
             { label: `${shortFromName} to ${shortToName}` },
           ]} />
-          <h1 style={{ marginBottom: '1rem' }}>
-            <span className="gold-text">{fromName} to {toName} Cab Service 2026</span><br />
-            <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', color: '#e2e8f0', fontWeight: 600 }}>₹{route.fares.hatchback.toLocaleString()} Onwards | {route.distanceKm} km | {route.durationHrs} hrs | ☎ +91 79798 77450</span>
-          </h1>
-        </div>
-      </section>
+          <div style={{ marginBottom: '2rem' }}>
+            <h1 style={{ marginBottom: '1rem' }}>
+              <span className="gold-text">{fromName} to {toName} Cab Service 2026</span><br />
+              <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', color: '#e2e8f0', fontWeight: 600 }}>₹{route.fares.hatchback.toLocaleString()} Onwards | {route.distanceKm} km | {route.durationHrs} hrs | ☎ +91 79798 77450</span>
+            </h1>
+            <div className="hero-btn-group">
+              <a href="tel:+917979877450" className="btn-primary">📞 Call: +91 79798 77450</a>
+              <a href={`https://wa.me/917979877450?text=Hi%20RS%20Travel%2C%20I%20want%20cab%20from%20${route.fromName}%20to%20${route.toName}`} target="_blank" rel="noopener noreferrer" className="btn-whatsapp pulse-animation">💬 Book on WhatsApp</a>
+            </div>
+          </div>
 
-      <div className="hero-booking-wrapper">
-        <div className="container-main">
+          {/* 3. BOOKING WIDGET (WHITE FORM BELOW HERO BANNER) */}
           <BookingWidget defaultFrom={route.fromName} defaultTo={route.toName} />
         </div>
-      </div>
+      </section>
 
       <div className="container-main section-spacing">
         {/* Quick Fare Box */}
@@ -1429,7 +1474,15 @@ function LocalRoutePage({ citySlug, routeSlug }: { citySlug: string; routeSlug: 
     <div className="page-content">
       <SchemaMarkup type="local-route" data={{ areaServed: lr.cityName, faqs }} />
 
-      <section className="hero-section">
+      {/* 1. BANNER BOOKING PANEL (Directly below Header) */}
+      <div style={{ paddingTop: '1rem', paddingBottom: '0.5rem' }}>
+        <div className="container-main">
+          <BannerBookingPanel />
+        </div>
+      </div>
+
+      {/* 2. NAV BANNER WITH HERO SLIDER, TEXT & CTAS */}
+      <section className="hero-section" style={{ minHeight: 'auto', paddingTop: '2rem', paddingBottom: '3rem' }}>
         <HeroSlider />
         <div className="container-main" style={{ position: 'relative', zIndex: 1 }}>
           <Breadcrumb items={[
@@ -1437,18 +1490,21 @@ function LocalRoutePage({ citySlug, routeSlug }: { citySlug: string; routeSlug: 
             { label: `Cab ${lr.cityName}`, href: `/cab-service-${lr.city}` },
             { label: `${lr.fromArea} to ${lr.toArea}` },
           ]} />
-          <h1 style={{ marginBottom: '1rem' }}>
-            <span className="gold-text">Taxi: {lr.fromArea} to {lr.toArea}</span><br />
-            <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', color: '#e2e8f0', fontWeight: 600 }}>{lr.cityName} | ₹{lr.startingFare} | +91 79798 77450</span>
-          </h1>
-        </div>
-      </section>
+          <div style={{ marginBottom: '2rem' }}>
+            <h1 style={{ marginBottom: '1rem' }}>
+              <span className="gold-text">Taxi: {lr.fromArea} to {lr.toArea}</span><br />
+              <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', color: '#e2e8f0', fontWeight: 600 }}>{lr.cityName} | ₹{lr.startingFare} | +91 79798 77450</span>
+            </h1>
+            <div className="hero-btn-group">
+              <a href="tel:+917979877450" className="btn-primary">📞 Call: +91 79798 77450</a>
+              <a href={`https://wa.me/917979877450?text=Hi%20RS%20Travel%2C%20I%20need%20taxi%20from%20${lr.fromArea}%20to%20${lr.toArea}%20in%20${lr.cityName}`} target="_blank" rel="noopener noreferrer" className="btn-whatsapp pulse-animation">💬 Book on WhatsApp</a>
+            </div>
+          </div>
 
-      <div className="hero-booking-wrapper">
-        <div className="container-main">
+          {/* 3. BOOKING WIDGET (WHITE FORM BELOW HERO BANNER) */}
           <BookingWidget defaultFrom={`${lr.fromArea}, ${lr.cityName}`} defaultTo={`${lr.toArea}, ${lr.cityName}`} cityName={lr.cityName} />
         </div>
-      </div>
+      </section>
 
       <div className="container-main section-spacing">
         <div className="quick-fare-box" style={{ marginBottom: '2rem' }}>

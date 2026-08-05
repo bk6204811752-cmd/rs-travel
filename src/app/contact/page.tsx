@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import CtaBanner from '@/components/CtaBanner';
 import BookingWidget from '@/components/BookingWidget';
+import BannerBookingPanel from '@/components/BannerBookingPanel';
 import HeroSlider from '@/components/HeroSlider';
 
 export const metadata: Metadata = {
@@ -24,15 +25,30 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="page-content">
-      <section className="hero-section" style={{ minHeight: '40vh' }}>
+      {/* 1. BANNER BOOKING PANEL (Directly below Header) */}
+      <div style={{ paddingTop: '1rem', paddingBottom: '0.5rem' }}>
+        <div className="container-main">
+          <BannerBookingPanel />
+        </div>
+      </div>
+
+      {/* 2. NAV BANNER WITH TEXT & HERO SLIDER */}
+      <section className="hero-section" style={{ minHeight: 'auto', paddingTop: '2rem', paddingBottom: '3rem' }}>
         <HeroSlider />
-        <div className="container-main" style={{ position: 'relative', zIndex: 1, paddingTop: '6rem', paddingBottom: '3rem' }}>
+        <div className="container-main" style={{ position: 'relative', zIndex: 1 }}>
           <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900, lineHeight: 1.15, marginBottom: '1rem' }}>
             <span className="gold-text">Contact RS Travel</span><br />
             <span style={{ fontSize: 'clamp(1rem, 2.5vw, 1.3rem)', color: '#e2e8f0', fontWeight: 600 }}>
               Jamshedpur&apos;s Fastest Cab Booking — Call, WhatsApp, or Email
             </span>
           </h1>
+          <div className="hero-btn-group" style={{ marginBottom: '2rem' }}>
+            <a href="tel:+917979877450" className="btn-primary">📞 Call: +91 79798 77450</a>
+            <a href="https://wa.me/917979877450?text=Hi%20RS%20Travel" target="_blank" rel="noopener noreferrer" className="btn-whatsapp pulse-animation">💬 WhatsApp Booking</a>
+          </div>
+
+          {/* 3. BOOKING WIDGET (WHITE FORM BELOW HERO BANNER) */}
+          <BookingWidget />
         </div>
       </section>
 

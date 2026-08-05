@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import HeroSlider from '@/components/HeroSlider';
+import BookingWidget from '@/components/BookingWidget';
+import BannerBookingPanel from '@/components/BannerBookingPanel';
 import CtaBanner from '@/components/CtaBanner';
 import { routes } from '@/lib/routes';
 import { fleet } from '@/lib/fleet';
@@ -29,9 +31,17 @@ export default function FareChartPage() {
 
   return (
     <div className="page-content">
-      <section className="hero-section" style={{ minHeight: '40vh' }}>
+      {/* 1. BANNER BOOKING PANEL (Directly below Header) */}
+      <div style={{ paddingTop: '1rem', paddingBottom: '0.5rem' }}>
+        <div className="container-main">
+          <BannerBookingPanel />
+        </div>
+      </div>
+
+      {/* 2. NAV BANNER WITH TEXT & HERO SLIDER */}
+      <section className="hero-section" style={{ minHeight: 'auto', paddingTop: '2rem', paddingBottom: '3rem' }}>
         <HeroSlider />
-        <div className="container-main" style={{ position: 'relative', zIndex: 1, paddingTop: '6rem', paddingBottom: '3rem' }}>
+        <div className="container-main" style={{ position: 'relative', zIndex: 1 }}>
           <div style={{ display: 'inline-block', padding: '0.35rem 0.85rem', background: 'rgba(249,115,22,0.15)', border: '1px solid rgba(249,115,22,0.3)', borderRadius: '8px', fontSize: '0.8rem', color: '#f97316', fontWeight: 600, marginBottom: '1rem' }}>
             📊 Updated for 2026 — Zero Hidden Charges
           </div>
@@ -41,6 +51,13 @@ export default function FareChartPage() {
               All Routes × All Vehicles | Fully Transparent Pricing
             </span>
           </h1>
+          <div className="hero-btn-group" style={{ marginBottom: '2rem' }}>
+            <a href="tel:+917979877450" className="btn-primary">📞 Call: +91 79798 77450</a>
+            <a href="https://wa.me/917979877450?text=Hi%20RS%20Travel" target="_blank" rel="noopener noreferrer" className="btn-whatsapp pulse-animation">💬 WhatsApp Booking</a>
+          </div>
+
+          {/* 3. BOOKING WIDGET (WHITE FORM BELOW HERO BANNER) */}
+          <BookingWidget />
         </div>
       </section>
 

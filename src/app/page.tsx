@@ -78,11 +78,18 @@ export default function HomePage() {
 
   return (
     <div className="page-content">
-      {/* HERO SECTION */}
-      <section className="hero-section">
+      {/* 1. BANNER BOOKING PANEL (Directly below Header) */}
+      <div style={{ paddingTop: '1rem', paddingBottom: '0.5rem' }}>
+        <div className="container-main">
+          <BannerBookingPanel />
+        </div>
+      </div>
+
+      {/* 2. NAV BANNER WITH TEXT, BADGES, CTAS & BACKGROUND IMAGES */}
+      <section className="hero-section" style={{ minHeight: 'auto', paddingTop: '2rem', paddingBottom: '3rem' }}>
         <HeroSlider />
         <div className="container-main" style={{ position: 'relative', zIndex: 1 }}>
-          <div style={{ maxWidth: '750px', marginBottom: '1.75rem' }}>
+          <div style={{ maxWidth: '850px', marginBottom: '2rem' }}>
             <div style={{ display: 'inline-block', padding: '0.4rem 0.95rem', background: 'rgba(15, 23, 42, 0.75)', border: '1.5px solid #f97316', borderRadius: '10px', fontSize: '0.82rem', color: '#ffffff', fontWeight: 800, marginBottom: '0.85rem', backdropFilter: 'blur(12px)', boxShadow: '0 4px 15px rgba(249, 115, 22, 0.25)' }}>
               🏆 Jamshedpur&apos;s Most Trusted Cab Service — Serving Since 2018
             </div>
@@ -105,17 +112,10 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* NEW HERO BANNER BOOKING PANEL (MATCHING USER IMAGES) */}
-          <BannerBookingPanel />
-        </div>
-      </section>
-
-      {/* BOOKING WIDGET SECTION — Mobile me Hero Banner ke nichhe, Desktop me clean transition (UNDISTURBED) */}
-      <div className="hero-booking-wrapper">
-        <div className="container-main">
+          {/* 3. BOOKING WIDGET (WHITE FORM BELOW HERO BANNER) */}
           <BookingWidget />
         </div>
-      </div>
+      </section>
 
       {/* STATS */}
       <section className="section-spacing" style={{ background: 'linear-gradient(180deg, var(--dark) 0%, rgba(26,115,232,0.08) 50%, var(--dark) 100%)' }}>
