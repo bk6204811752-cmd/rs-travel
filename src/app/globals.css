@@ -4110,14 +4110,39 @@ a.blog-card:hover {
   border: 1px solid rgba(249, 115, 22, 0.3);
 }
 
-.accordion-arrow {
-  font-size: 0.7rem;
+.accordion-chevron {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   color: #94a3b8;
+}
+
+.accordion-chevron.open {
+  transform: rotate(90deg);
+  color: var(--primary-light);
 }
 
 .drawer-accordion-body {
   padding: 0.25rem 0.5rem 0.6rem;
   background: rgba(15, 23, 42, 0.4);
   border-top: 1px solid rgba(148, 163, 184, 0.1);
-  animation: fadeIn 0.25s ease-in-out;
+}
+
+.drawer-price-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 6px;
+  background: rgba(249, 115, 22, 0.12);
+  color: #f97316;
+  border: 1px solid rgba(249, 115, 22, 0.25);
+  letter-spacing: -0.01em;
+}
+
+.mobile-footer-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  font-weight: 700;
+  color: #facc15;
+  font-size: 0.8rem;
 }
