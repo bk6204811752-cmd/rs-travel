@@ -434,7 +434,7 @@ export default function HomePage() {
               </p>
               <h3 style={{ marginBottom: '0.6rem', marginTop: '1.2rem', color: 'var(--text-primary)' }}>Popular Routes from Jamshedpur (Sonari)</h3>
               <p style={{ marginBottom: '0.85rem' }}>
-                Our highest-booked outstation routes include <strong>Jamshedpur to Ranchi cab</strong> (130 km, ~3 hrs, ₹1,799 Hatchback), <strong>Jamshedpur to Kolkata cab</strong> (260 km, ~5-6 hrs, ₹3,999), <strong>Jamshedpur to Dhanbad cab</strong> (80 km, ~2 hrs, ₹1,799), <strong>Jamshedpur to Bokaro cab</strong> (120 km, ~3 hrs, ₹2,399), and <strong>Jamshedpur to Puri cab</strong> (520 km, ~10 hrs, ₹7,999). All fares are all-inclusive — toll, fuel, driver allowance covered.
+                Our highest-booked outstation routes include <strong>Jamshedpur to Ranchi cab</strong> (130 km, ~3 hrs, ₹1,799 Hatchback), <strong>Jamshedpur to Kolkata cab</strong> (260 km, ~5-6 hrs, ₹3,999), <strong>Jamshedpur to Dhanbad cab</strong> (80 km, ~2 hrs, ₹2,399), <strong>Jamshedpur to Bokaro cab</strong> (120 km, ~3 hrs, ₹1,999), and <strong>Jamshedpur to Puri cab</strong> (520 km, ~10 hrs, ₹7,999). All fares are all-inclusive — toll, fuel, driver allowance covered.
               </p>
               <h3 style={{ marginBottom: '0.6rem', marginTop: '1.2rem', color: 'var(--text-primary)' }}>Local Taxi in Jamshedpur / Sonari Area</h3>
               <p style={{ marginBottom: '0.85rem' }}>
@@ -524,12 +524,12 @@ export default function HomePage() {
               <a href="/ranchi-to-jamshedpur-cab" className="internal-link">🚗 Ranchi to Jamshedpur Cab ₹1,799</a>
               <a href="/ranchi-to-kolkata-cab" className="internal-link">🚗 Ranchi to Kolkata Cab ₹5,999</a>
               <a href="/ranchi-to-patna-cab" className="internal-link">🚗 Ranchi to Patna Cab ₹5,299</a>
-              <a href="/jamshedpur-to-dhanbad-cab" className="internal-link">🚗 Jamshedpur to Dhanbad Cab ₹1,799</a>
+              <a href="/jamshedpur-to-dhanbad-cab" className="internal-link">🚗 Jamshedpur to Dhanbad Cab ₹2,399</a>
               <a href="/jamshedpur-to-puri-cab" className="internal-link">🚗 Jamshedpur to Puri Cab ₹7,999</a>
               <a href="/bokaro-to-ranchi-cab" className="internal-link">🚗 Bokaro to Ranchi Cab ₹2,199</a>
               <a href="/dhanbad-to-kolkata-cab" className="internal-link">🚗 Dhanbad to Kolkata Cab</a>
               <a href="/jamshedpur-to-deoghar-cab" className="internal-link">🚗 Jamshedpur to Deoghar Cab ₹2,899</a>
-              <a href="/jamshedpur-to-bokaro-cab" className="internal-link">🚗 Jamshedpur to Bokaro Cab ₹2,399</a>
+              <a href="/jamshedpur-to-bokaro-cab" className="internal-link">🚗 Jamshedpur to Bokaro Cab ₹1,999</a>
               <a href="/jamshedpur-to-patna-cab" className="internal-link">🚗 Jamshedpur to Patna Cab ₹5,499</a>
             </div>
           </div>
