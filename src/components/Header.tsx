@@ -65,6 +65,7 @@ const INFO_LINKS = [
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [openAccordion, setOpenAccordion] = useState<string | null>('services');
   const pathname = usePathname();
 
   useEffect(() => {
@@ -72,6 +73,10 @@ export default function Header() {
   }, []);
 
   const closeMenu = () => setIsMenuOpen(false);
+
+  const toggleAccordion = (key: string) => {
+    setOpenAccordion(prev => (prev === key ? null : key));
+  };
 
   useEffect(() => {
     if (!isMenuOpen) return;
@@ -169,7 +174,7 @@ export default function Header() {
         <div className="mobile-drawer-header">
           <div className="mobile-drawer-title">
             <span className="mobile-drawer-logo">🚕</span>
-            <span><strong style={{ color: 'var(--primary)' }}>RS</strong> <strong style={{ color: 'var(--cta)' }}>Travel</strong> <small style={{ color: '#94a3b8' }}>Menu</small></span>
+            <span><strong style={{ color: 'var(--primary)' }}>RS</strong> <strong style={{ color: 'var(--cta)' }}>Travel</strong></span>
           </div>
           <button
             className="mobile-drawer-close"
@@ -180,11 +185,11 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Quick CTA Buttons */}
-        <div style={{ display: 'flex', gap: '0.6rem', padding: '0.75rem 1rem', borderBottom: '1px solid rgba(148, 163, 184, 0.15)' }}>
+        {/* Quick Action Bar */}
+        <div style={{ display: 'flex', gap: '0.5rem', padding: '0.75rem 1rem', borderBottom: '1px solid rgba(148, 163, 184, 0.15)', background: 'rgba(15, 23, 42, 0.6)' }}>
           <a
             href="tel:+917979877450"
-            style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem', padding: '0.75rem', background: 'linear-gradient(135deg, var(--primary), #1557b0)', color: '#fff', borderRadius: '12px', fontWeight: 700, fontSize: '0.88rem', textDecoration: 'none', boxShadow: '0 4px 12px rgba(26, 115, 232, 0.3)' }}
+            style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem', padding: '0.65rem', background: 'linear-gradient(135deg, var(--primary), #1557b0)', color: '#fff', borderRadius: '10px', fontWeight: 700, fontSize: '0.85rem', textDecoration: 'none' }}
             onClick={closeMenu}
           >
             📞 Call Now
@@ -193,7 +198,7 @@ export default function Header() {
             href="https://wa.me/917979877450?text=Hi%20RS%20Travel%2C%20I%20want%20to%20book%20a%20cab"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem', padding: '0.75rem', background: 'linear-gradient(135deg, #25D366, #128C7E)', color: '#fff', borderRadius: '12px', fontWeight: 700, fontSize: '0.88rem', textDecoration: 'none', boxShadow: '0 4px 12px rgba(37, 211, 102, 0.3)' }}
+            style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem', padding: '0.65rem', background: 'linear-gradient(135deg, #25D366, #128C7E)', color: '#fff', borderRadius: '10px', fontWeight: 700, fontSize: '0.85rem', textDecoration: 'none' }}
             onClick={closeMenu}
           >
             💬 WhatsApp
@@ -201,93 +206,172 @@ export default function Header() {
         </div>
 
         <nav className="mobile-drawer-nav" aria-label="Mobile menu">
-
-          {/* Booking Strip */}
-          <div style={{ margin: '0.5rem 0 0.5rem', padding: '0.75rem 0.9rem', borderRadius: '14px', background: 'linear-gradient(135deg, rgba(234,179,8,0.14), rgba(249,115,22,0.12))', border: '1px solid rgba(234,179,8,0.3)', textAlign: 'center' }}>
-            <div style={{ fontSize: '0.95rem', fontWeight: 800, color: '#facc15' }}>🏆 #1 Rated Cab Service in Jharkhand</div>
-            <div style={{ fontSize: '0.72rem', color: 'var(--text-secondary)', marginTop: '0.2rem' }}>Sonari, Jamshedpur · Est. 2018 · 30,000+ Rides</div>
-          </div>
-
-          {/* Popular Services */}
-          <div className="mobile-nav-group">
-            <p className="mobile-nav-group-title">🚕 Popular Services</p>
-            <div className="mobile-nav-group-list" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.35rem' }}>
-              {SERVICE_LINKS.map(l => (
-                <a key={l.href} href={l.href} className={`mobile-nav-link${isActive(l.href) ? ' active' : ''}`} onClick={closeMenu} style={{ padding: '0.55rem 0.65rem', fontSize: '0.88rem', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '10px' }}>
-                  <span className="nav-icon" style={{ fontSize: '1rem' }}>{l.icon}</span>
-                  <span className="nav-text" style={{ fontSize: '0.85rem', fontWeight: 600 }}>{l.label}</span>
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <hr className="mobile-nav-divider" />
-
-          {/* Cab by City — all 16 cities */}
-          <div className="mobile-nav-group">
-            <p className="mobile-nav-group-title">🏙️ Cab by City</p>
-            <div className="mobile-nav-group-list" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.35rem' }}>
-              {CITY_LINKS.map(l => (
-                <a key={l.href} href={l.href} className={`mobile-nav-link${isActive(l.href) ? ' active' : ''}`} onClick={closeMenu} style={{ padding: '0.55rem 0.65rem', fontSize: '0.88rem', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '10px' }}>
-                  <span className="nav-icon" style={{ fontSize: '0.95rem' }}>{l.icon}</span>
-                  <span className="nav-text" style={{ fontSize: '0.85rem', fontWeight: 600 }}>{l.label}</span>
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <hr className="mobile-nav-divider" />
-
-          {/* Our Fleet */}
-          <div className="mobile-nav-group">
-            <p className="mobile-nav-group-title">🚗 Our Fleet</p>
-            <div className="mobile-nav-group-list" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.35rem' }}>
-              {FLEET_LINKS.map(l => (
-                <a key={l.href} href={l.href} className={`mobile-nav-link${isActive(l.href) ? ' active' : ''}`} onClick={closeMenu} style={{ padding: '0.55rem 0.65rem', fontSize: '0.88rem', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '10px' }}>
-                  <span className="nav-icon" style={{ fontSize: '0.95rem' }}>{l.icon}</span>
-                  <span className="nav-text" style={{ fontSize: '0.85rem', fontWeight: 600 }}>{l.label}</span>
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <hr className="mobile-nav-divider" />
-
-          {/* Popular Routes */}
-          <div className="mobile-nav-group">
-            <p className="mobile-nav-group-title">🛣️ Popular Routes</p>
-            <div className="mobile-nav-group-list">
-              {ROUTE_LINKS.map(l => (
-                <a key={l.href} href={l.href} className={`mobile-nav-link${isActive(l.href) ? ' active' : ''}`} onClick={closeMenu}>
-                  <span className="nav-icon">{l.icon}</span>
-                  <span className="nav-text">{l.label}</span>
-                  <span className="nav-sub">{l.sub}</span>
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <hr className="mobile-nav-divider" />
-
-          {/* Quick Links */}
-          <div className="mobile-nav-group">
-            <p className="mobile-nav-group-title">📋 Quick Links</p>
-            <div className="mobile-nav-group-list">
-              {INFO_LINKS.map(l => (
-                <a key={l.href} href={l.href} className={`mobile-nav-link${isActive(l.href) ? ' active' : ''}`} onClick={closeMenu}>
+          {/* Primary Quick Pages Grid */}
+          <div className="mobile-nav-group" style={{ marginBottom: '0.75rem' }}>
+            <p className="mobile-nav-group-title" style={{ fontSize: '0.75rem', opacity: 0.8 }}>⚡ Navigation</p>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.4rem' }}>
+              {INFO_LINKS.slice(0, 4).map(l => (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  className={`mobile-nav-link${isActive(l.href) ? ' active' : ''}`}
+                  onClick={closeMenu}
+                  style={{ padding: '0.6rem 0.75rem', borderRadius: '10px', fontWeight: 600, fontSize: '0.85rem' }}
+                >
                   <span className="nav-icon">{l.icon}</span>
                   <span className="nav-text">{l.label}</span>
                 </a>
               ))}
             </div>
+          </div>
+
+          <hr className="mobile-nav-divider" style={{ margin: '0.5rem 0' }} />
+
+          {/* Accordion 1: Cab Services */}
+          <div className="drawer-accordion-item">
+            <button
+              type="button"
+              className={`drawer-accordion-header ${openAccordion === 'services' ? 'expanded' : ''}`}
+              onClick={() => toggleAccordion('services')}
+            >
+              <div className="accordion-title">
+                <span>🚕</span>
+                <strong>Cab Services</strong>
+              </div>
+              <div className="accordion-meta">
+                <span className="accordion-badge">8 Services</span>
+                <span className="accordion-arrow">{openAccordion === 'services' ? '▲' : '▼'}</span>
+              </div>
+            </button>
+
+            {openAccordion === 'services' && (
+              <div className="drawer-accordion-body">
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.35rem', paddingTop: '0.5rem' }}>
+                  {SERVICE_LINKS.map(l => (
+                    <a key={l.href} href={l.href} className={`mobile-nav-link${isActive(l.href) ? ' active' : ''}`} onClick={closeMenu} style={{ padding: '0.5rem 0.6rem', fontSize: '0.82rem' }}>
+                      <span className="nav-icon" style={{ fontSize: '0.9rem' }}>{l.icon}</span>
+                      <span className="nav-text" style={{ fontSize: '0.82rem', fontWeight: 600 }}>{l.label}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Accordion 2: Cab by City */}
+          <div className="drawer-accordion-item">
+            <button
+              type="button"
+              className={`drawer-accordion-header ${openAccordion === 'cities' ? 'expanded' : ''}`}
+              onClick={() => toggleAccordion('cities')}
+            >
+              <div className="accordion-title">
+                <span>🏙️</span>
+                <strong>Cab by City</strong>
+              </div>
+              <div className="accordion-meta">
+                <span className="accordion-badge">16 Cities</span>
+                <span className="accordion-arrow">{openAccordion === 'cities' ? '▲' : '▼'}</span>
+              </div>
+            </button>
+
+            {openAccordion === 'cities' && (
+              <div className="drawer-accordion-body">
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.35rem', paddingTop: '0.5rem' }}>
+                  {CITY_LINKS.map(l => (
+                    <a key={l.href} href={l.href} className={`mobile-nav-link${isActive(l.href) ? ' active' : ''}`} onClick={closeMenu} style={{ padding: '0.5rem 0.6rem', fontSize: '0.82rem' }}>
+                      <span className="nav-icon" style={{ fontSize: '0.85rem' }}>{l.icon}</span>
+                      <span className="nav-text" style={{ fontSize: '0.82rem', fontWeight: 600 }}>{l.label}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Accordion 3: Our Fleet */}
+          <div className="drawer-accordion-item">
+            <button
+              type="button"
+              className={`drawer-accordion-header ${openAccordion === 'fleet' ? 'expanded' : ''}`}
+              onClick={() => toggleAccordion('fleet')}
+            >
+              <div className="accordion-title">
+                <span>🚗</span>
+                <strong>Our Fleet</strong>
+              </div>
+              <div className="accordion-meta">
+                <span className="accordion-badge">7 Cabs</span>
+                <span className="accordion-arrow">{openAccordion === 'fleet' ? '▲' : '▼'}</span>
+              </div>
+            </button>
+
+            {openAccordion === 'fleet' && (
+              <div className="drawer-accordion-body">
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.35rem', paddingTop: '0.5rem' }}>
+                  {FLEET_LINKS.map(l => (
+                    <a key={l.href} href={l.href} className={`mobile-nav-link${isActive(l.href) ? ' active' : ''}`} onClick={closeMenu} style={{ padding: '0.5rem 0.6rem', fontSize: '0.82rem' }}>
+                      <span className="nav-icon" style={{ fontSize: '0.85rem' }}>{l.icon}</span>
+                      <span className="nav-text" style={{ fontSize: '0.82rem', fontWeight: 600 }}>{l.label}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Accordion 4: Popular Routes */}
+          <div className="drawer-accordion-item">
+            <button
+              type="button"
+              className={`drawer-accordion-header ${openAccordion === 'routes' ? 'expanded' : ''}`}
+              onClick={() => toggleAccordion('routes')}
+            >
+              <div className="accordion-title">
+                <span>🛣️</span>
+                <strong>Popular Routes</strong>
+              </div>
+              <div className="accordion-meta">
+                <span className="accordion-badge">6 Routes</span>
+                <span className="accordion-arrow">{openAccordion === 'routes' ? '▲' : '▼'}</span>
+              </div>
+            </button>
+
+            {openAccordion === 'routes' && (
+              <div className="drawer-accordion-body">
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem', paddingTop: '0.5rem' }}>
+                  {ROUTE_LINKS.map(l => (
+                    <a key={l.href} href={l.href} className={`mobile-nav-link${isActive(l.href) ? ' active' : ''}`} onClick={closeMenu} style={{ padding: '0.55rem 0.75rem' }}>
+                      <span className="nav-icon">{l.icon}</span>
+                      <span className="nav-text" style={{ fontWeight: 600 }}>{l.label}</span>
+                      <span className="nav-sub">{l.sub}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Additional Links */}
+          <div style={{ display: 'flex', gap: '0.4rem', marginTop: '0.5rem' }}>
+            {INFO_LINKS.slice(4).map(l => (
+              <a
+                key={l.href}
+                href={l.href}
+                className={`mobile-nav-link${isActive(l.href) ? ' active' : ''}`}
+                onClick={closeMenu}
+                style={{ flex: 1, padding: '0.55rem', borderRadius: '8px', fontSize: '0.8rem', textAlign: 'center', justifyContent: 'center' }}
+              >
+                <span className="nav-icon">{l.icon}</span>
+                <span className="nav-text">{l.label}</span>
+              </a>
+            ))}
           </div>
 
           <div className="mobile-drawer-footer">
             <div className="mobile-footer-rating">⭐ 4.8/5 on Google · 2,800+ Happy Customers</div>
-            <p style={{ marginTop: '0.5rem' }}>📍 Sonari, Jamshedpur, Jharkhand – 832101</p>
-            <p>📞 +91 79798 77450 · ✉️ info@rstravels.com</p>
-            <p style={{ marginTop: '0.4rem' }}>🕒 24/7 Booking · 365 Days a Year</p>
-            <p>🛡️ Police-Verified Drivers · GPS-Tracked Fleet</p>
+            <p style={{ marginTop: '0.3rem' }}>📍 Sonari, Jamshedpur · 📞 +91 79798 77450</p>
+            <p style={{ marginTop: '0.2rem' }}>🕒 24/7 Booking · Verified Cabs</p>
           </div>
         </nav>
       </div>

@@ -4042,3 +4042,70 @@ a.blog-card:hover {
   font-weight: 700;
   color: #facc15;
 }
+
+/* === DRAWER ACCORDION STYLES === */
+.drawer-accordion-item {
+  margin-bottom: 0.4rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  background: rgba(30, 41, 59, 0.35);
+  transition: all 0.25s ease;
+}
+
+.drawer-accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 0.85rem;
+  background: rgba(30, 41, 59, 0.6);
+  border: none;
+  color: #f1f5f9;
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s ease;
+}
+
+.drawer-accordion-header:hover,
+.drawer-accordion-header.expanded {
+  background: rgba(26, 115, 232, 0.15);
+  color: #ffffff;
+}
+
+.accordion-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.accordion-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.accordion-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 20px;
+  background: rgba(249, 115, 22, 0.15);
+  color: #f97316;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+.accordion-arrow {
+  font-size: 0.7rem;
+  color: #94a3b8;
+}
+
+.drawer-accordion-body {
+  padding: 0.25rem 0.5rem 0.6rem;
+  background: rgba(15, 23, 42, 0.4);
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+  animation: fadeIn 0.25s ease-in-out;
+}
