@@ -12,59 +12,59 @@
   /* === PRIMARY: Professional Blue — trust & reliability === */
   --primary: #1a73e8;
   --primary-dark: #1557b0;
-  --primary-light: #4da3ff;
-  --primary-glow: rgba(26, 115, 232, 0.2);
+  --primary-light: #1a73e8;
+  --primary-glow: rgba(26, 115, 232, 0.12);
 
   /* === CTA / ACTION: Warm Orange — not red === */
   --cta: #f97316;
   --cta-dark: #ea580c;
   --cta-light: #fb923c;
 
-  /* === BACKGROUNDS: Refined Slate Navy — not pitch black === */
-  --secondary: #1e293b;
-  --dark: #0f172a;
-  --darker: #0b1220;
-  --card-bg: rgba(30, 41, 59, 0.65);
-  --card-border: rgba(148, 163, 184, 0.18);
+  /* === BACKGROUNDS: Clean Pure White Theme === */
+  --secondary: #f8fafc;
+  --dark: #f1f5f9;
+  --darker: #ffffff;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
 
-  /* === TEXT === */
-  --text-primary: #f3f4f6;
-  --text-secondary: #9ca3af;
+  /* === TEXT: Dark Slate Navy for 100% legibility === */
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
 
   /* === ACCENTS === */
-  --accent-green: #22c55e;
-  --accent-emerald: #10b981;
-  --accent-blue: #60a5fa;
-  --accent-cyan: #22d3ee;
-  --accent-violet: #a78bfa;
+  --accent-green: #16a34a;
+  --accent-emerald: #059669;
+  --accent-blue: #2563eb;
+  --accent-cyan: #0284c7;
+  --accent-violet: #7c3aed;
   --whatsapp: #25D366;
 
   /* === GRADIENTS === */
   --gradient-primary: linear-gradient(135deg, #1a73e8 0%, #1557b0 100%);
   --gradient-cta: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
-  --gradient-brand: linear-gradient(135deg, #1a73e8 0%, #4da3ff 100%);
-  --gradient-hero: linear-gradient(160deg, #111827 0%, #1e293b 50%, #1a2744 100%);
+  --gradient-brand: linear-gradient(135deg, #1a73e8 0%, #2563eb 100%);
+  --gradient-hero: linear-gradient(160deg, #ffffff 0%, #f8fafc 50%, #eff6ff 100%);
   --gradient-premium: linear-gradient(135deg, #1a73e8 0%, #7c3aed 50%, #f97316 100%);
-  --gradient-neon: linear-gradient(135deg, #10b981 0%, #1a73e8 100%);
+  --gradient-neon: linear-gradient(135deg, #059669 0%, #1a73e8 100%);
 
-  /* === CARD GRADIENT VARIANTS — lighter, more breathable === */
-  --gradient-card-1: linear-gradient(145deg, rgba(30, 41, 59, 0.85) 0%, rgba(30, 41, 59, 0.55) 60%, rgba(26, 115, 232, 0.06) 100%);
-  --gradient-card-2: linear-gradient(145deg, rgba(30, 41, 59, 0.85) 0%, rgba(30, 41, 59, 0.55) 60%, rgba(16, 185, 129, 0.06) 100%);
-  --gradient-card-3: linear-gradient(145deg, rgba(30, 41, 59, 0.85) 0%, rgba(30, 41, 59, 0.55) 60%, rgba(249, 115, 22, 0.06) 100%);
-  --gradient-card-4: linear-gradient(145deg, rgba(30, 41, 59, 0.85) 0%, rgba(30, 41, 59, 0.55) 60%, rgba(124, 58, 237, 0.06) 100%);
-  --gradient-card-5: linear-gradient(145deg, rgba(30, 41, 59, 0.85) 0%, rgba(30, 41, 59, 0.55) 60%, rgba(236, 72, 153, 0.06) 100%);
-  --gradient-card-6: linear-gradient(145deg, rgba(30, 41, 59, 0.85) 0%, rgba(30, 41, 59, 0.55) 60%, rgba(34, 211, 238, 0.06) 100%);
-  --gradient-card-7: linear-gradient(145deg, rgba(30, 41, 59, 0.85) 0%, rgba(30, 41, 59, 0.55) 60%, rgba(96, 165, 250, 0.06) 100%);
-  --gradient-card-8: linear-gradient(145deg, rgba(30, 41, 59, 0.85) 0%, rgba(30, 41, 59, 0.55) 60%, rgba(52, 211, 153, 0.06) 100%);
-  --gradient-stat: linear-gradient(145deg, rgba(30, 41, 59, 0.9) 0%, rgba(26, 115, 232, 0.08) 100%);
-  --gradient-route: linear-gradient(160deg, rgba(30, 41, 59, 0.8) 0%, rgba(30, 41, 59, 0.5) 60%, rgba(249, 115, 22, 0.06) 100%);
-  --gradient-review: linear-gradient(160deg, rgba(30, 41, 59, 0.85) 0%, rgba(26, 115, 232, 0.06) 100%);
+  /* === CARD GRADIENT VARIANTS FOR WHITE THEME === */
+  --gradient-card-1: linear-gradient(145deg, #ffffff 0%, #f8fafc 60%, rgba(26, 115, 232, 0.04) 100%);
+  --gradient-card-2: linear-gradient(145deg, #ffffff 0%, #f8fafc 60%, rgba(16, 185, 129, 0.04) 100%);
+  --gradient-card-3: linear-gradient(145deg, #ffffff 0%, #f8fafc 60%, rgba(249, 115, 22, 0.04) 100%);
+  --gradient-card-4: linear-gradient(145deg, #ffffff 0%, #f8fafc 60%, rgba(124, 58, 237, 0.04) 100%);
+  --gradient-card-5: linear-gradient(145deg, #ffffff 0%, #f8fafc 60%, rgba(236, 72, 153, 0.04) 100%);
+  --gradient-card-6: linear-gradient(145deg, #ffffff 0%, #f8fafc 60%, rgba(34, 211, 238, 0.04) 100%);
+  --gradient-card-7: linear-gradient(145deg, #ffffff 0%, #f8fafc 60%, rgba(96, 165, 250, 0.04) 100%);
+  --gradient-card-8: linear-gradient(145deg, #ffffff 0%, #f8fafc 60%, rgba(52, 211, 153, 0.04) 100%);
+  --gradient-stat: linear-gradient(145deg, #ffffff 0%, rgba(26, 115, 232, 0.05) 100%);
+  --gradient-route: linear-gradient(160deg, #ffffff 0%, #f8fafc 60%, rgba(249, 115, 22, 0.04) 100%);
+  --gradient-review: linear-gradient(160deg, #ffffff 0%, rgba(26, 115, 232, 0.04) 100%);
   --gradient-border-rainbow: linear-gradient(135deg, #1a73e8 0%, #7c3aed 25%, #ec4899 50%, #f97316 75%, #10b981 100%);
 
   /* === SHADOWS === */
-  --shadow-primary: 0 0 25px rgba(26, 115, 232, 0.15);
-  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.2);
-  --shadow-card-hover: 0 16px 48px rgba(0, 0, 0, 0.3), 0 0 20px rgba(26, 115, 232, 0.08);
+  --shadow-primary: 0 4px 20px rgba(26, 115, 232, 0.12);
+  --shadow-card: 0 4px 16px rgba(15, 23, 42, 0.06);
+  --shadow-card-hover: 0 16px 40px rgba(15, 23, 42, 0.12), 0 0 20px rgba(26, 115, 232, 0.08);
 
   /* Legacy aliases for compatibility */
   --gradient-gold: var(--gradient-cta);
@@ -88,9 +88,9 @@ html {
 
 body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: var(--darker);
-  background-image: radial-gradient(ellipse at 20% 0%, rgba(26, 115, 232, 0.04) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 100%, rgba(59, 139, 235, 0.04) 0%, transparent 60%);
+  background: #ffffff;
+  background-image: radial-gradient(ellipse at 20% 0%, rgba(26, 115, 232, 0.03) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 100%, rgba(249, 115, 22, 0.03) 0%, transparent 60%);
   color: var(--text-primary);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -207,11 +207,11 @@ img {
   background: var(--gradient-card-1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #e2e8f0;
   border-radius: 20px;
   padding: 1.5rem;
   transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
   position: relative;
   overflow: hidden;
 }
@@ -256,7 +256,7 @@ img {
 
 .glass-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), 0 0 40px rgba(26, 115, 232, 0.1);
+  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.1), 0 0 20px rgba(26, 115, 232, 0.08);
   border-color: rgba(26, 115, 232, 0.35);
 }
 
@@ -430,16 +430,16 @@ img {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: linear-gradient(180deg, rgba(3, 9, 18, 0.98) 0%, rgba(10, 22, 40, 0.95) 100%);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border-bottom: 1px solid rgba(26, 115, 232, 0.15);
+  border-bottom: 1px solid #e2e8f0;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(26, 115, 232, 0.1);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
 }
 
 .header-top-bar {
-  background: linear-gradient(90deg, #030912, #0a1628, #0d1f3c, #0a1628, #030912);
+  background: #0f172a;
   color: #ffffff;
   display: flex;
   justify-content: center;
@@ -448,7 +448,7 @@ img {
   font-size: 0.78rem;
   font-weight: 600;
   text-align: center;
-  border-bottom: 1px solid rgba(26, 115, 232, 0.08);
+  border-bottom: 1px solid #1e293b;
 }
 
 @keyframes shimmer-bg {
@@ -714,14 +714,14 @@ img {
   width: min(85vw, 380px);
   height: 100vh;
   height: 100dvh;
-  background: linear-gradient(180deg, rgba(17, 24, 39, 0.99) 0%, rgba(30, 41, 59, 0.98) 100%);
+  background: #ffffff;
   backdrop-filter: blur(30px) saturate(180%);
   -webkit-backdrop-filter: blur(30px) saturate(180%);
   z-index: 99999;
   transform: translateX(100%);
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s ease, opacity 0.35s ease;
-  border-left: 1px solid rgba(26, 115, 232, 0.12);
-  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.4);
+  border-left: 1px solid #e2e8f0;
+  box-shadow: -10px 0 40px rgba(15, 23, 42, 0.15);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   padding: 0 1.5rem 2.5rem;
@@ -745,7 +745,7 @@ img {
   width: 100vw;
   height: 100vh;
   height: 100dvh;
-  background: rgba(3, 9, 18, 0.65);
+  background: rgba(15, 23, 42, 0.4);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   z-index: 999;
@@ -769,10 +769,8 @@ img {
   justify-content: space-between;
   margin: 0 -1.5rem;
   padding: 1rem 1.5rem;
-  background: rgba(17, 24, 39, 0.98);
-  backdrop-filter: blur(30px) saturate(180%);
-  -webkit-backdrop-filter: blur(30px) saturate(180%);
-  border-bottom: 1px solid rgba(26, 115, 232, 0.15);
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .mobile-drawer-title {
@@ -4060,8 +4058,8 @@ a.blog-card:hover {
   margin-bottom: 0.4rem;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgba(148, 163, 184, 0.12);
-  background: rgba(30, 41, 59, 0.35);
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
   transition: all 0.25s ease;
 }
 
@@ -4071,9 +4069,9 @@ a.blog-card:hover {
   align-items: center;
   justify-content: space-between;
   padding: 0.7rem 0.85rem;
-  background: rgba(30, 41, 59, 0.6);
+  background: #f8fafc;
   border: none;
-  color: #f1f5f9;
+  color: #0f172a;
   font-size: 0.9rem;
   cursor: pointer;
   outline: none;
@@ -4082,8 +4080,8 @@ a.blog-card:hover {
 
 .drawer-accordion-header:hover,
 .drawer-accordion-header.expanded {
-  background: rgba(26, 115, 232, 0.15);
-  color: #ffffff;
+  background: rgba(26, 115, 232, 0.08);
+  color: var(--primary);
 }
 
 .accordion-title {
@@ -4112,18 +4110,18 @@ a.blog-card:hover {
 
 .accordion-chevron {
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  color: #94a3b8;
+  color: #64748b;
 }
 
 .accordion-chevron.open {
   transform: rotate(90deg);
-  color: var(--primary-light);
+  color: var(--primary);
 }
 
 .drawer-accordion-body {
   padding: 0.25rem 0.5rem 0.6rem;
-  background: rgba(15, 23, 42, 0.4);
-  border-top: 1px solid rgba(148, 163, 184, 0.1);
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
 }
 
 .drawer-price-tag {
