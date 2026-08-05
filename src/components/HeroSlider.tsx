@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useCallback } from 'react';
-
 import Image from 'next/image';
 
 const images = [
@@ -31,7 +30,7 @@ export default function HeroSlider() {
       height: '100%',
       zIndex: 0,
       overflow: 'hidden',
-      background: 'var(--dark)',
+      background: '#0f172a',
       contain: 'strict',
     }}>
       {images.map((src, index) => (
@@ -50,17 +49,23 @@ export default function HeroSlider() {
             src={src}
             alt={`RS Travel - Best Cab Service in Jamshedpur Tata Ranchi - Fleet ${index + 1}`}
             fill
-            quality={30}
+            quality={95}
             priority={index === 0}
             loading={index === 0 ? 'eager' : 'lazy'}
             sizes="100vw"
-            style={{ objectFit: 'cover', objectPosition: 'center', zIndex: 0 }}
+            style={{ 
+              objectFit: 'cover', 
+              objectPosition: 'center', 
+              zIndex: 0,
+              transform: currentIndex === index ? 'scale(1.02)' : 'scale(1)',
+              transition: 'transform 5s ease-out, opacity 0.8s ease-in-out',
+            }}
           />
           <div 
             style={{
               position: 'absolute',
               inset: 0,
-              backgroundImage: 'linear-gradient(to bottom, rgba(2, 6, 23, 0.55) 0%, rgba(2, 6, 23, 0.85) 70%, rgba(2, 6, 23, 0.98) 100%)',
+              backgroundImage: 'linear-gradient(to bottom, rgba(15, 23, 42, 0.60) 0%, rgba(15, 23, 42, 0.78) 65%, rgba(15, 23, 42, 0.92) 100%)',
               zIndex: 1
             }} 
           />
@@ -69,4 +74,5 @@ export default function HeroSlider() {
     </div>
   );
 }
+
 

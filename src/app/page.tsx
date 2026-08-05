@@ -81,17 +81,17 @@ export default function HomePage() {
       <section className="hero-section">
         <HeroSlider />
         <div className="container-main" style={{ position: 'relative', zIndex: 1 }}>
-          <div style={{ maxWidth: '700px', marginBottom: '1.75rem' }}>
-            <div style={{ display: 'inline-block', padding: '0.3rem 0.75rem', background: 'rgba(249,115,22,0.15)', border: '1px solid rgba(249,115,22,0.3)', borderRadius: '8px', fontSize: '0.75rem', color: '#f97316', fontWeight: 600, marginBottom: '0.85rem' }}>
+          <div style={{ maxWidth: '750px', marginBottom: '1.75rem' }}>
+            <div style={{ display: 'inline-block', padding: '0.4rem 0.95rem', background: 'rgba(15, 23, 42, 0.75)', border: '1.5px solid #f97316', borderRadius: '10px', fontSize: '0.82rem', color: '#ffffff', fontWeight: 800, marginBottom: '0.85rem', backdropFilter: 'blur(12px)', boxShadow: '0 4px 15px rgba(249, 115, 22, 0.25)' }}>
               🏆 Jamshedpur&apos;s Most Trusted Cab Service — Serving Since 2018
             </div>
-            <h1 style={{ fontSize: 'clamp(1.6rem, 5vw, 3rem)', fontWeight: 900, lineHeight: 1.15, marginBottom: '0.85rem' }}>
-              <span className="gold-text">Best Cab Service in Jamshedpur</span> (Sonari & Tata)<br />
-              <span style={{ fontSize: 'clamp(0.85rem, 2.5vw, 1.5rem)', color: '#e2e8f0', fontWeight: 600 }}>
+            <h1 style={{ fontSize: 'clamp(1.65rem, 5vw, 3.1rem)', fontWeight: 900, lineHeight: 1.18, marginBottom: '0.85rem', color: '#ffffff' }}>
+              <span className="gold-text">Best Cab Service in Jamshedpur</span> <span style={{ color: '#ffffff', textShadow: '0 2px 10px rgba(0,0,0,0.85)' }}>(Sonari & Tata)</span><br />
+              <span style={{ fontSize: 'clamp(0.9rem, 2.5vw, 1.45rem)', color: '#f8fafc', fontWeight: 700, textShadow: '0 1px 8px rgba(0,0,0,0.8)' }}>
                 15 Cities • 50+ Cabs • 24/7 Taxi Service • ₹11/km
               </span>
             </h1>
-            <p style={{ color: '#cbd5e1', fontSize: 'clamp(0.85rem, 2.5vw, 1rem)', maxWidth: '550px', marginBottom: '1.25rem', lineHeight: 1.6 }}>
+            <p style={{ color: '#e2e8f0', fontSize: 'clamp(0.88rem, 2.5vw, 1.02rem)', maxWidth: '580px', marginBottom: '1.35rem', lineHeight: 1.6, textShadow: '0 1px 6px rgba(0,0,0,0.8)' }}>
               RS Travel offers dependable AC cabs across Jamshedpur (Sonari, Bistupur, Mango, Sakchi), Ranchi, Dhanbad & Bokaro — police-verified drivers, GPS-tracked fleet, no hidden charges. One way, outstation & local taxi available 24/7.
             </p>
             <div className="hero-btn-group">
@@ -373,7 +373,7 @@ export default function HomePage() {
               { step: '3', icon: '✅', title: 'Ride Confirmed', desc: 'Receive booking confirmation with driver name, number & vehicle info on WhatsApp.' },
             ].map((item, i) => (
               <div key={i} className="glass-card" style={{ textAlign: 'center', position: 'relative', paddingTop: '2rem' }}>
-                <div style={{ position: 'absolute', top: '-14px', left: '50%', transform: 'translateX(-50%)', width: '30px', height: '30px', background: 'var(--gradient-gold)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 900, color: '#000', fontSize: '0.85rem' }}>
+                <div style={{ position: 'absolute', top: '-14px', left: '50%', transform: 'translateX(-50%)', width: '30px', height: '30px', background: 'var(--gradient-gold)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 900, color: '#ffffff', fontSize: '0.85rem', boxShadow: '0 4px 10px rgba(249,115,22,0.35)' }}>
                   {item.step}
                 </div>
                 <div style={{ fontSize: '2rem', marginBottom: '0.4rem' }}>{item.icon}</div>
@@ -404,7 +404,7 @@ export default function HomePage() {
       </section>
 
       {/* SEO CONTENT BLOCK */}
-      <section className="section-spacing" style={{ background: 'linear-gradient(180deg, var(--dark) 0%, rgba(30,41,59,0.4) 50%, var(--dark) 100%)' }}>
+      <section className="section-spacing" style={{ background: 'linear-gradient(180deg, var(--dark) 0%, rgba(26,115,232,0.04) 50%, var(--dark) 100%)' }}>
         <div className="container-main">
           <div className="content-block">
             <h2 style={{ textAlign: 'center', marginBottom: '1.25rem' }}>

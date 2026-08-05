@@ -122,38 +122,35 @@ export default function BlogSection({ pageName, type }: BlogSectionProps) {
           <a
             key={article.slug}
             href={`/blog/${article.slug}`}
+            className="glass-card"
             style={{
               display: 'block',
-              background: '#ffffff',
-              border: '1px solid #e2e8f0',
-              borderRadius: '16px',
-              padding: '1.25rem',
               textDecoration: 'none',
-              transition: 'all 0.3s ease',
-              boxShadow: '0 4px 16px rgba(15, 23, 42, 0.05)',
+              padding: '1.25rem',
             }}
           >
             <div
               style={{
                 display: 'inline-block',
-                padding: '0.2rem 0.6rem',
-                background: 'rgba(249,115,22,0.12)',
-                border: '1px solid rgba(249,115,22,0.25)',
-                borderRadius: '6px',
-                fontSize: '0.7rem',
-                color: '#f97316',
-                fontWeight: 600,
-                marginBottom: '0.5rem',
+                padding: '0.25rem 0.65rem',
+                background: 'rgba(26,115,232,0.08)',
+                border: '1px solid rgba(26,115,232,0.2)',
+                borderRadius: '8px',
+                fontSize: '0.72rem',
+                color: 'var(--primary)',
+                fontWeight: 700,
+                marginBottom: '0.6rem',
               }}
             >
               {article.category} • {article.readTime}
             </div>
             <h3
               style={{
-                fontSize: '0.95rem',
-                color: 'var(--text-primary)',
+                fontSize: '0.98rem',
+                color: '#0f172a',
                 lineHeight: 1.4,
                 margin: 0,
+                fontWeight: 800,
               }}
             >
               {article.title}
