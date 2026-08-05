@@ -48,7 +48,7 @@ export default function BookingWidget({ defaultFrom = '', defaultTo = '', cityNa
     setIsSubmitting(true);
     
     const tripTypeMap: Record<string, string> = {
-      'one-way': 'Oneway',
+      'one-way': 'One Way',
       'round-trip': 'Round Trip',
       'local': 'Local',
       'airport': 'Airport'
@@ -56,11 +56,11 @@ export default function BookingWidget({ defaultFrom = '', defaultTo = '', cityNa
     
     const cabTypeMap: Record<string, string> = {
       'hatchback': 'Hatchback',
-      'sedan': 'sedan',
-      'suv': 'Suv',
-      'innova': 'innova',
-      'crysta': 'innova crysta',
-      'tempo': 'Tampo traveler'
+      'sedan': 'Sedan',
+      'suv': 'SUV',
+      'innova': 'Innova',
+      'crysta': 'Innova Crysta',
+      'tempo': 'Tempo Traveller'
     };
     
     // Create a dynamic hidden iframe and form to bypass opaque fetch restrictions
@@ -71,7 +71,7 @@ export default function BookingWidget({ defaultFrom = '', defaultTo = '', cityNa
     document.body.appendChild(iframe);
 
     const formElement = document.createElement('form');
-    formElement.action = 'https://docs.google.com/forms/d/e/1FAIpQLSfd0RKuh_I3FDWvmr37UGWOqZmjgkgNroiF3AOpJ2jY9Q3ohw/formResponse';
+    formElement.action = 'https://docs.google.com/forms/d/e/1FAIpQLSedFpbkM1HpFy9tGVtkdM0tP84e6p8_nmYuuU4OT_kV798CzA/formResponse';
     formElement.method = 'POST';
     formElement.target = iframeName;
 
@@ -83,14 +83,14 @@ export default function BookingWidget({ defaultFrom = '', defaultTo = '', cityNa
       formElement.appendChild(input);
     };
 
-    appendInput('entry.542348811', tripTypeMap[activeTab] || 'Oneway');
-    appendInput('entry.868158706', cabTypeMap[cabType] || 'sedan');
-    appendInput('entry.1124196172', from);
-    appendInput('entry.764915580', to);
-    appendInput('entry.2020361825', date);
-    appendInput('entry.175765874', time);
-    appendInput('entry.318570201', name);
-    appendInput('entry.377226372', phone);
+    appendInput('entry.2079591145', tripTypeMap[activeTab] || 'One Way');
+    appendInput('entry.801087277', cabTypeMap[cabType] || 'Sedan');
+    appendInput('entry.1817864103', from);
+    appendInput('entry.1945641677', to);
+    appendInput('entry.1136777', date);
+    appendInput('entry.1121605275', time);
+    appendInput('entry.239581321', name);
+    appendInput('entry.1565811072', phone);
 
     document.body.appendChild(formElement);
     
