@@ -161,7 +161,8 @@ export default function Header() {
         id="mobile-drawer"
         className={`mobile-drawer ${isMenuOpen ? 'open' : ''}`}
         role="dialog"
-        aria-modal="true"
+        aria-modal={isMenuOpen}
+        aria-hidden={!isMenuOpen}
         aria-label="Main menu"
       >
         {/* Drawer Header */}
