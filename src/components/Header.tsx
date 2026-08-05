@@ -180,10 +180,10 @@ export default function Header() {
         </div>
 
         {/* Quick CTA Buttons */}
-        <div style={{ display: 'flex', gap: '0.6rem', padding: '0 1rem 1rem', borderBottom: '1px solid var(--card-border)' }}>
+        <div style={{ display: 'flex', gap: '0.6rem', padding: '0.75rem 1rem', borderBottom: '1px solid rgba(148, 163, 184, 0.15)' }}>
           <a
             href="tel:+917979877450"
-            style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem', padding: '0.65rem', background: 'linear-gradient(135deg, var(--primary), #e85d04)', color: '#fff', borderRadius: '10px', fontWeight: 700, fontSize: '0.85rem', textDecoration: 'none' }}
+            style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem', padding: '0.75rem', background: 'linear-gradient(135deg, var(--primary), #1557b0)', color: '#fff', borderRadius: '12px', fontWeight: 700, fontSize: '0.88rem', textDecoration: 'none', boxShadow: '0 4px 12px rgba(26, 115, 232, 0.3)' }}
             onClick={closeMenu}
           >
             📞 Call Now
@@ -192,7 +192,7 @@ export default function Header() {
             href="https://wa.me/917979877450?text=Hi%20RS%20Travel%2C%20I%20want%20to%20book%20a%20cab"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem', padding: '0.65rem', background: 'linear-gradient(135deg, #25D366, #128C7E)', color: '#fff', borderRadius: '10px', fontWeight: 700, fontSize: '0.85rem', textDecoration: 'none' }}
+            style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem', padding: '0.75rem', background: 'linear-gradient(135deg, #25D366, #128C7E)', color: '#fff', borderRadius: '12px', fontWeight: 700, fontSize: '0.88rem', textDecoration: 'none', boxShadow: '0 4px 12px rgba(37, 211, 102, 0.3)' }}
             onClick={closeMenu}
           >
             💬 WhatsApp
@@ -202,26 +202,9 @@ export default function Header() {
         <nav className="mobile-drawer-nav" aria-label="Mobile menu">
 
           {/* Booking Strip */}
-          <div style={{ margin: '1rem 0 0.5rem', padding: '0.75rem 0.9rem', borderRadius: '14px', background: 'linear-gradient(135deg, rgba(234,179,8,0.14), rgba(249,115,22,0.12))', border: '1px solid rgba(234,179,8,0.3)', textAlign: 'center' }}>
+          <div style={{ margin: '0.5rem 0 0.5rem', padding: '0.75rem 0.9rem', borderRadius: '14px', background: 'linear-gradient(135deg, rgba(234,179,8,0.14), rgba(249,115,22,0.12))', border: '1px solid rgba(234,179,8,0.3)', textAlign: 'center' }}>
             <div style={{ fontSize: '0.95rem', fontWeight: 800, color: '#facc15' }}>🏆 #1 Rated Cab Service in Jharkhand</div>
             <div style={{ fontSize: '0.72rem', color: 'var(--text-secondary)', marginTop: '0.2rem' }}>Sonari, Jamshedpur · Est. 2018 · 30,000+ Rides</div>
-          </div>
-
-          {/* Quick Actions */}
-          <div className="mobile-quick-actions">
-            <a href="tel:+917979877450" className="mobile-nav-btn mobile-call-btn" onClick={closeMenu} aria-label="Call RS Travel now">
-              📞 Call Now
-            </a>
-            <a
-              href="https://wa.me/917979877450?text=Hi%20RS%20Travel%2C%20I%20want%20to%20book%20a%20cab"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mobile-nav-btn mobile-wa-btn"
-              onClick={closeMenu}
-              aria-label="Book a cab via WhatsApp"
-            >
-              💬 WhatsApp
-            </a>
           </div>
 
           {/* Popular Services */}
