@@ -64,7 +64,7 @@ export default function BookingWidget({ defaultFrom = '', defaultTo = '', cityNa
     };
     
     // Send dual background POST to deployed Google Apps Script Web App URL
-    const scriptUrl = 'https://script.google.com/macros/s/AKfycby1dsCy26pkzWN5UyXCot1QN1-WDZLmIVpDN1M3ASAhvdDe5MRoY2LePRIipj7AJGj2Dg/exec';
+    const scriptUrl = process.env.NEXT_PUBLIC_APPS_SCRIPT_URL || 'https://script.google.com/macros/s/AKfycby1dsCy26pkzWN5UyXCot1QN1-WDZLmIVpDN1M3ASAhvdDe5MRoY2LePRIipj7AJGj2Dg/exec';
     try {
       fetch(scriptUrl, {
         method: 'POST',
@@ -93,7 +93,7 @@ export default function BookingWidget({ defaultFrom = '', defaultTo = '', cityNa
     document.body.appendChild(iframe);
 
     const formElement = document.createElement('form');
-    formElement.action = 'https://docs.google.com/forms/d/e/1FAIpQLSedFpbkM1HpFy9tGVtkdM0tP84e6p8_nmYuuU4OT_kV798CzA/formResponse';
+    formElement.action = process.env.NEXT_PUBLIC_GOOGLE_FORM_ACTION_URL || 'https://docs.google.com/forms/d/e/1FAIpQLSedFpbkM1HpFy9tGVtkdM0tP84e6p8_nmYuuU4OT_kV798CzA/formResponse';
     formElement.method = 'POST';
     formElement.target = iframeName;
 
