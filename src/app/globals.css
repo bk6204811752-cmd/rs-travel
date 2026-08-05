@@ -37,7 +37,7 @@
   --accent-blue: #60a5fa;
   --accent-cyan: #22d3ee;
   --accent-violet: #a78bfa;
-  --whatsapp: #128c7e;
+  --whatsapp: #25D366;
 
   /* === GRADIENTS === */
   --gradient-primary: linear-gradient(135deg, #1a73e8 0%, #1557b0 100%);
@@ -2641,12 +2641,15 @@ img {
 
 .floating-buttons {
   position: fixed;
-  bottom: 1.5rem;
+  bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
   right: 1.25rem;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
-  gap: 0.75rem;
-  z-index: 9999;
+  gap: 0.85rem;
+  z-index: 99999 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
 }
 
 @media (min-width: 768px) {
@@ -2661,14 +2664,18 @@ img {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: #ffffff !important;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
   will-change: transform;
+  visibility: visible !important;
+  opacity: 1 !important;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 @media (min-width: 768px) {
@@ -2679,35 +2686,35 @@ img {
 }
 
 .float-wa {
-  background: var(--whatsapp);
+  background: #25D366 !important;
   animation: waPulse 2s ease-in-out infinite;
 }
 
 .float-wa:hover {
-  background: #1da851;
-  transform: translateY(-4px) scale(1.08);
+  background: #1da851 !important;
+  transform: translateY(-4px) scale(1.1);
 }
 
 .float-call {
-  background: var(--gradient-primary);
-  color: #fff;
+  background: linear-gradient(135deg, #1a73e8 0%, #1557b0 100%) !important;
+  color: #ffffff !important;
   animation: callPulse 2.5s ease-in-out infinite;
 }
 
 .float-call:hover {
-  background: var(--primary-dark);
-  transform: translateY(-4px) scale(1.08);
+  background: linear-gradient(135deg, #1557b0 0%, #0d47a1 100%) !important;
+  transform: translateY(-4px) scale(1.1);
 }
 
 @keyframes waPulse {
 
   0%,
   100% {
-    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
   }
 
   50% {
-    box-shadow: 0 4px 40px rgba(37, 211, 102, 0.6), 0 0 0 12px rgba(37, 211, 102, 0.1);
+    box-shadow: 0 4px 35px rgba(37, 211, 102, 0.75), 0 0 0 10px rgba(37, 211, 102, 0.15);
   }
 }
 
@@ -2715,11 +2722,11 @@ img {
 
   0%,
   100% {
-    box-shadow: 0 4px 20px rgba(26, 115, 232, 0.3);
+    box-shadow: 0 4px 20px rgba(26, 115, 232, 0.4);
   }
 
   50% {
-    box-shadow: 0 4px 40px rgba(26, 115, 232, 0.6), 0 0 0 12px rgba(26, 115, 232, 0.1);
+    box-shadow: 0 4px 35px rgba(26, 115, 232, 0.75), 0 0 0 10px rgba(26, 115, 232, 0.15);
   }
 }
 
@@ -2733,42 +2740,49 @@ img {
 }
 
 /* ============================================================
-   BACK TO TOP
+   BACK TO TOP (Saffron Theme)
    ============================================================ */
 
 .back-to-top {
   position: fixed;
-  bottom: 1.5rem;
+  bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
   left: 1.25rem;
-  width: 40px;
-  height: 40px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
-  background: rgba(15, 23, 42, 0.85);
+  background: linear-gradient(135deg, #FF9933 0%, #FF6F00 100%) !important;
   backdrop-filter: blur(8px);
-  border: 1px solid var(--card-border);
-  color: var(--text-primary);
-  display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff !important;
+  display: flex !important;
   justify-content: center;
   align-items: center;
-  z-index: 997;
+  z-index: 99998 !important;
   text-decoration: none;
-  opacity: 0.7;
-  transition: all 0.3s ease;
+  opacity: 0.95;
+  box-shadow: 0 4px 18px rgba(255, 111, 0, 0.45), 0 0 14px rgba(255, 153, 51, 0.3);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  visibility: visible !important;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 @media (min-width: 768px) {
   .back-to-top {
     bottom: 2rem;
-    width: 44px;
-    height: 44px;
+    left: 1.5rem;
+    width: 48px;
+    height: 48px;
   }
 }
 
 .back-to-top:hover {
   opacity: 1;
-  background: var(--primary);
-  color: #fff;
-  border-color: var(--primary);
+  background: linear-gradient(135deg, #FFa742 0%, #FF5500 100%) !important;
+  color: #ffffff !important;
+  border-color: #ffffff;
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 8px 25px rgba(255, 111, 0, 0.65), 0 0 20px rgba(255, 153, 51, 0.5);
 }
 
 /* ============================================================
