@@ -76,9 +76,14 @@ export const metadata: Metadata = {
   verification: {},
   category: 'travel',
   icons: {
-    icon: '/logo.webp',
-    apple: '/logo.webp',
-    shortcut: '/logo.webp',
+    icon: [
+      { url: '/RSLOGO.svg', type: 'image/svg+xml' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/RSLOGO.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: ['/RSLOGO.svg'],
   },
   manifest: '/site.webmanifest',
 };
@@ -98,6 +103,9 @@ export default function RootLayout({
         <meta name="theme-color" content="#1a73e8" />
         <link rel="alternate" hrefLang="en-IN" href="https://rstravelsjsr.com" />
         <link rel="alternate" hrefLang="x-default" href="https://rstravelsjsr.com" />
+        {/* Favicon fallback links for all browsers & search engines */}
+        <link rel="icon" type="image/svg+xml" href="/RSLOGO.svg" />
+        <link rel="apple-touch-icon" href="/RSLOGO.svg" />
         {/* TaxiService + LocalBusiness Schema */}
         <script
           type="application/ld+json"
@@ -109,9 +117,9 @@ export default function RootLayout({
               name: "RS Travel",
               alternateName: ["RS Cab Service", "RS Travel Jamshedpur", "RS Travels Jamshedpur", "RS Travel Sonari"],
               url: "https://rstravelsjsr.com",
-              logo: "https://rstravelsjsr.com/logo.webp",
+              logo: "https://rstravelsjsr.com/RSLOGO.svg",
               image: [
-                "https://rstravelsjsr.com/logo.webp",
+                "https://rstravelsjsr.com/RSLOGO.svg",
                 "https://rstravelsjsr.com/background/rsbg1.webp",
               ],
               telephone: "+917979877450",

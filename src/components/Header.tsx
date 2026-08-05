@@ -85,7 +85,7 @@ export default function Header() {
       <div className="header-main">
         <a href="/" className="logo-area" style={{ textDecoration: 'none' }}>
           <div className="logo-img-wrap">
-            <Image src="/logo.webp" alt="RS Travel Logo" width={96} height={56} style={{ borderRadius: '6px', objectFit: 'contain' }} priority unoptimized />
+            <Image src="/RSLOGO.svg" alt="RS Travel Logo" width={96} height={56} style={{ borderRadius: '6px', objectFit: 'contain' }} priority unoptimized />
           </div>
           <div className="logo-text" suppressHydrationWarning>
             <div className="logo-title">

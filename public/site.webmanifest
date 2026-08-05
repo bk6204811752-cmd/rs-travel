@@ -3,9 +3,10 @@
   "short_name": "RS Travel",
   "icons": [
     {
-      "src": "/logo.webp",
+      "src": "/RSLOGO.svg",
       "sizes": "any",
-      "type": "image/webp"
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
     }
   ],
   "theme_color": "#f59e0b",
