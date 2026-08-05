@@ -261,7 +261,7 @@ export default function RootLayout({
               <div className="footer-section">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
                   <div className="footer-logo-wrap">
-                    <Image src="/logo.webp" alt="RS Travel Logo" width={96} height={56} style={{ borderRadius: '6px', objectFit: 'contain' }} unoptimized />
+                    <Image src="/RSLOGO.svg" alt="RS Travel Logo" width={96} height={56} style={{ borderRadius: '6px', objectFit: 'contain' }} unoptimized />
                   </div>
                   <h3 style={{ margin: 0 }}>RS Travel</h3>
                 </div>
