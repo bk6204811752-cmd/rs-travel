@@ -4,9 +4,9 @@ import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 
 const images = [
-  '/background/rsbg1.webp?v=2',
-  '/background/rsbg2.webp?v=2',
-  '/background/rsbg3.webp?v=2',
+  '/background/rsbg1.webp',
+  '/background/rsbg2.webp',
+  '/background/rsbg3.webp',
 ];
 
 export default function HeroSlider() {
