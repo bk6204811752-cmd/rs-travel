@@ -77,13 +77,15 @@ export const metadata: Metadata = {
   category: 'travel',
   icons: {
     icon: [
+      { url: '/logo.png', type: 'image/png' },
       { url: '/RSLOGO.svg', type: 'image/svg+xml' },
       { url: '/icon.svg', type: 'image/svg+xml' },
     ],
     apple: [
+      { url: '/logo.png', type: 'image/png' },
       { url: '/RSLOGO.svg', type: 'image/svg+xml' },
     ],
-    shortcut: ['/RSLOGO.svg'],
+    shortcut: ['/logo.png', '/RSLOGO.svg'],
   },
   manifest: '/site.webmanifest',
 };
@@ -104,8 +106,9 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="en-IN" href="https://rstravelsjsr.com" />
         <link rel="alternate" hrefLang="x-default" href="https://rstravelsjsr.com" />
         {/* Favicon fallback links for all browsers & search engines */}
+        <link rel="icon" type="image/png" href="/logo.png" />
         <link rel="icon" type="image/svg+xml" href="/RSLOGO.svg" />
-        <link rel="apple-touch-icon" href="/RSLOGO.svg" />
+        <link rel="apple-touch-icon" href="/logo.png" />
         {/* TaxiService + LocalBusiness Schema */}
         <script
           type="application/ld+json"
