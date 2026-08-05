@@ -120,8 +120,9 @@ export default function RootLayout({
               name: "RS Travel",
               alternateName: ["RS Cab Service", "RS Travel Jamshedpur", "RS Travels Jamshedpur", "RS Travel Sonari"],
               url: "https://rstravelsjsr.com",
-              logo: "https://rstravelsjsr.com/RSLOGO.svg",
+              logo: "https://rstravelsjsr.com/logo.png",
               image: [
+                "https://rstravelsjsr.com/logo.png",
                 "https://rstravelsjsr.com/RSLOGO.svg",
                 "https://rstravelsjsr.com/background/rsbg1.webp",
               ],
