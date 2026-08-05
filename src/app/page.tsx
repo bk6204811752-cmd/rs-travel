@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import BookingWidget from '@/components/BookingWidget';
+import BannerBookingPanel from '@/components/BannerBookingPanel';
 import CtaBanner from '@/components/CtaBanner';
 import HeroSlider from '@/components/HeroSlider';
 import BlogSection from '@/components/BlogSection';
@@ -103,10 +104,13 @@ export default function HomePage() {
               </a>
             </div>
           </div>
+
+          {/* NEW HERO BANNER BOOKING PANEL (MATCHING USER IMAGES) */}
+          <BannerBookingPanel />
         </div>
       </section>
 
-      {/* BOOKING WIDGET SECTION — Mobile me Hero Banner ke nichhe, Desktop me clean transition */}
+      {/* BOOKING WIDGET SECTION — Mobile me Hero Banner ke nichhe, Desktop me clean transition (UNDISTURBED) */}
       <div className="hero-booking-wrapper">
         <div className="container-main">
           <BookingWidget />
