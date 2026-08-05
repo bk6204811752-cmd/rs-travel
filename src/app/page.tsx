@@ -103,9 +103,15 @@ export default function HomePage() {
               </a>
             </div>
           </div>
-          <BookingWidget />
         </div>
       </section>
+
+      {/* BOOKING WIDGET SECTION — Mobile me Hero Banner ke nichhe, Desktop me clean transition */}
+      <div className="hero-booking-wrapper">
+        <div className="container-main">
+          <BookingWidget />
+        </div>
+      </div>
 
       {/* STATS */}
       <section className="section-spacing" style={{ background: 'linear-gradient(180deg, var(--dark) 0%, rgba(26,115,232,0.08) 50%, var(--dark) 100%)' }}>

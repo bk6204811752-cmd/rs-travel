@@ -439,9 +439,14 @@ function CityHubPage({ citySlug }: { citySlug: string }) {
               </span>
             </h1>
           </div>
-          <BookingWidget defaultFrom={city.name} cityName={city.name} />
         </div>
       </section>
+
+      <div className="hero-booking-wrapper">
+        <div className="container-main">
+          <BookingWidget defaultFrom={city.name} cityName={city.name} />
+        </div>
+      </div>
 
       <div className="container-main">
         {/* Long-form Content Block — Critical for SEO ranking */}
@@ -821,9 +826,14 @@ function ServiceInCityPage({ citySlug, serviceSlug }: { citySlug: string; servic
             <span className="gold-text">{service.name} in {displayCityName}</span><br />
             <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', color: '#e2e8f0', fontWeight: 600 }}>+91 79798 77450 | ₹{service.startingPrice} {service.priceUnit}</span>
           </h1>
-          <BookingWidget defaultFrom={city.name} cityName={city.name} />
         </div>
       </section>
+
+      <div className="hero-booking-wrapper">
+        <div className="container-main">
+          <BookingWidget defaultFrom={city.name} cityName={city.name} />
+        </div>
+      </div>
 
       <div className="container-main section-spacing">
         <div className="content-block">
@@ -956,9 +966,14 @@ function FleetInCityPage({ citySlug, fleetSlug }: { citySlug: string; fleetSlug:
             <span className="gold-text">{vehicle.name} in {displayCityName}</span><br />
             <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', color: '#e2e8f0', fontWeight: 600 }}>Book Now +91 79798 77450 | ₹{vehicle.perKmRate}/km</span>
           </h1>
-          <BookingWidget defaultFrom={city.name} cityName={city.name} />
         </div>
       </section>
+
+      <div className="hero-booking-wrapper">
+        <div className="container-main">
+          <BookingWidget defaultFrom={city.name} cityName={city.name} />
+        </div>
+      </div>
 
       <div className="container-main section-spacing">
         <div className="content-block">
@@ -1105,9 +1120,14 @@ function OutstationRoutePage({ from, to }: { from: string; to: string }) {
             <span className="gold-text">{fromName} to {toName} Cab Service 2026</span><br />
             <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', color: '#e2e8f0', fontWeight: 600 }}>₹{route.fares.hatchback.toLocaleString()} Onwards | {route.distanceKm} km | {route.durationHrs} hrs | ☎ +91 79798 77450</span>
           </h1>
-          <BookingWidget defaultFrom={route.fromName} defaultTo={route.toName} />
         </div>
       </section>
+
+      <div className="hero-booking-wrapper">
+        <div className="container-main">
+          <BookingWidget defaultFrom={route.fromName} defaultTo={route.toName} />
+        </div>
+      </div>
 
       <div className="container-main section-spacing">
         {/* Quick Fare Box */}
@@ -1421,9 +1441,14 @@ function LocalRoutePage({ citySlug, routeSlug }: { citySlug: string; routeSlug: 
             <span className="gold-text">Taxi: {lr.fromArea} to {lr.toArea}</span><br />
             <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', color: '#e2e8f0', fontWeight: 600 }}>{lr.cityName} | ₹{lr.startingFare} | +91 79798 77450</span>
           </h1>
-          <BookingWidget defaultFrom={`${lr.fromArea}, ${lr.cityName}`} defaultTo={`${lr.toArea}, ${lr.cityName}`} cityName={lr.cityName} />
         </div>
       </section>
+
+      <div className="hero-booking-wrapper">
+        <div className="container-main">
+          <BookingWidget defaultFrom={`${lr.fromArea}, ${lr.cityName}`} defaultTo={`${lr.toArea}, ${lr.cityName}`} cityName={lr.cityName} />
+        </div>
+      </div>
 
       <div className="container-main section-spacing">
         <div className="quick-fare-box" style={{ marginBottom: '2rem' }}>
