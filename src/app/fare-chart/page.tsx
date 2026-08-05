@@ -37,7 +37,7 @@ export default function FareChartPage() {
           </div>
           <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900, lineHeight: 1.15, marginBottom: '1rem' }}>
             <span className="gold-text">Cab Fare Chart</span> — RS Travel Jharkhand<br />
-            <span style={{ fontSize: 'clamp(1rem, 2.5vw, 1.3rem)', color: '#94a3b8', fontWeight: 600 }}>
+            <span style={{ fontSize: 'clamp(1rem, 2.5vw, 1.3rem)', color: '#e2e8f0', fontWeight: 600 }}>
               All Routes × All Vehicles | Fully Transparent Pricing
             </span>
           </h1>

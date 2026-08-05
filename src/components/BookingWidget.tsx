@@ -155,7 +155,7 @@ export default function BookingWidget({ defaultFrom = '', defaultTo = '', cityNa
   return (
     <div className="booking-widget">
       <div style={{ textAlign: 'center', marginBottom: '1.25rem' }}>
-        <h2 style={{ fontSize: 'clamp(1.2rem, 4vw, 1.6rem)', fontWeight: 800, color: '#f8fafc', marginBottom: '0.15rem' }}>
+        <h2 style={{ fontSize: 'clamp(1.2rem, 4vw, 1.6rem)', fontWeight: 800, color: '#0f172a', marginBottom: '0.15rem' }}>
           Book Your Cab <span className="gold-text">Now</span>
         </h2>
         <p style={{ fontSize: 'clamp(0.75rem, 2vw, 0.85rem)', color: 'var(--text-secondary)' }}>
@@ -164,10 +164,10 @@ export default function BookingWidget({ defaultFrom = '', defaultTo = '', cityNa
       </div>
 
       {submitSuccess ? (
-        <div style={{ textAlign: 'center', padding: '2rem 1rem', background: 'rgba(16, 185, 129, 0.1)', borderRadius: '1rem', border: '1px solid rgba(16, 185, 129, 0.2)', marginTop: '2rem' }}>
+        <div style={{ textAlign: 'center', padding: '2rem 1rem', background: 'rgba(16, 185, 129, 0.08)', borderRadius: '1rem', border: '1px solid rgba(16, 185, 129, 0.25)', marginTop: '2rem' }}>
           <div style={{ fontSize: '4rem', marginBottom: '1rem', animation: 'pulse 2s infinite' }}>🎉</div>
-          <h3 style={{ fontSize: '1.25rem', color: '#10b981', marginBottom: '0.5rem', fontWeight: 'bold' }}>Booking Request Received!</h3>
-          <p style={{ color: '#f8fafc', marginBottom: '1.5rem', fontSize: '0.9rem' }}>
+          <h3 style={{ fontSize: '1.25rem', color: '#16a34a', marginBottom: '0.5rem', fontWeight: 'bold' }}>Booking Request Received!</h3>
+          <p style={{ color: '#334155', marginBottom: '1.5rem', fontSize: '0.9rem' }}>
             Thank you for choosing RS Travel! We have received your booking request and our team will contact you shortly to confirm all details.
           </p>
         </div>

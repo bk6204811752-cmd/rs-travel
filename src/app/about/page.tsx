@@ -32,7 +32,7 @@ export default function AboutPage() {
           </div>
           <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 900, lineHeight: 1.15, marginBottom: '1.5rem' }}>
             <span className="gold-text">Who We Are — RS Travel</span><br />
-            <span style={{ fontSize: 'clamp(1rem, 2.5vw, 1.5rem)', color: '#94a3b8', fontWeight: 600 }}>
+            <span style={{ fontSize: 'clamp(1rem, 2.5vw, 1.5rem)', color: '#e2e8f0', fontWeight: 600 }}>
               Jamshedpur&apos;s Punctual, People-First Cab Service
             </span>
           </h1>

@@ -108,7 +108,7 @@ export default function Header() {
               <span style={{ color: 'var(--primary)', fontWeight: 800 }}>RS</span>{' '}
               <span style={{ color: 'var(--cta)', fontWeight: 800 }}>Travel</span>
             </div>
-            <p style={{ fontSize: '0.75rem', color: '#94a3b8', margin: 0, fontWeight: 500 }}>Sonari, Jamshedpur • Taxi 24/7</p>
+            <p style={{ fontSize: '0.75rem', color: '#475569', margin: 0, fontWeight: 500 }}>Sonari, Jamshedpur • Taxi 24/7</p>
           </div>
         </a>
 
@@ -172,7 +172,7 @@ export default function Header() {
         <div className="mobile-drawer-header">
           <div className="mobile-drawer-title">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8C1.4 11.3 1 12.1 1 13v3c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
-            <span><strong style={{ color: 'var(--primary)', fontWeight: 800 }}>RS</strong> <strong style={{ color: 'var(--cta)', fontWeight: 800 }}>Travel</strong> <small style={{ color: '#94a3b8', fontSize: '0.75rem', fontWeight: 500 }}>Sonari, JSR</small></span>
+            <span><strong style={{ color: 'var(--primary)', fontWeight: 800 }}>RS</strong> <strong style={{ color: 'var(--cta)', fontWeight: 800 }}>Travel</strong> <small style={{ color: '#475569', fontSize: '0.75rem', fontWeight: 500 }}>Sonari, JSR</small></span>
           </div>
           <button
             className="mobile-drawer-close"
@@ -208,7 +208,7 @@ export default function Header() {
         <nav className="mobile-drawer-nav" aria-label="Mobile menu">
           {/* Primary Quick Pages Grid */}
           <div className="mobile-nav-group" style={{ marginBottom: '0.75rem' }}>
-            <p className="mobile-nav-group-title" style={{ fontSize: '0.72rem', letterSpacing: '0.08em', color: '#94a3b8', textTransform: 'uppercase' }}>Quick Navigation</p>
+            <p className="mobile-nav-group-title" style={{ fontSize: '0.72rem', letterSpacing: '0.08em', color: '#475569', textTransform: 'uppercase' }}>Quick Navigation</p>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.4rem' }}>
               {NAV_ITEMS.map(l => (
                 <a
@@ -312,7 +312,7 @@ export default function Header() {
                     <a key={l.href} href={l.href} className={`mobile-nav-link${isActive(l.href) ? ' active' : ''}`} onClick={closeMenu} style={{ padding: '0.55rem 0.75rem', fontSize: '0.85rem' }}>
                       <div style={{ display: 'flex', flexDirection: 'column' }}>
                         <span className="nav-text" style={{ fontWeight: 600 }}>{l.label}</span>
-                        <small style={{ color: '#94a3b8', fontSize: '0.72rem' }}>{l.seats}</small>
+                        <small style={{ color: '#475569', fontSize: '0.72rem' }}>{l.seats}</small>
                       </div>
                       <span className="drawer-price-tag" style={{ background: 'rgba(26, 115, 232, 0.12)', color: 'var(--primary-light)', border: '1px solid rgba(26, 115, 232, 0.25)' }}>{l.rate}</span>
                     </a>
@@ -346,7 +346,7 @@ export default function Header() {
                     <a key={l.href} href={l.href} className={`mobile-nav-link${isActive(l.href) ? ' active' : ''}`} onClick={closeMenu} style={{ padding: '0.55rem 0.75rem' }}>
                       <div style={{ display: 'flex', flexDirection: 'column' }}>
                         <span className="nav-text" style={{ fontWeight: 600, fontSize: '0.85rem' }}>{l.title}</span>
-                        <small style={{ color: '#94a3b8', fontSize: '0.72rem' }}>{l.meta}</small>
+                        <small style={{ color: '#475569', fontSize: '0.72rem' }}>{l.meta}</small>
                       </div>
                       <span className="drawer-price-tag" style={{ background: 'rgba(34, 197, 94, 0.12)', color: '#22c55e', border: '1px solid rgba(34, 197, 94, 0.25)' }}>{l.price}</span>
                     </a>
@@ -371,7 +371,7 @@ export default function Header() {
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#facc15" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
               <span>4.8/5 on Google · 2,800+ Happy Customers</span>
             </div>
-            <p style={{ marginTop: '0.3rem', fontSize: '0.75rem', color: '#94a3b8' }}>📍 Sonari, Jamshedpur · 📞 +91 79798 77450</p>
+            <p style={{ marginTop: '0.3rem', fontSize: '0.75rem', color: '#475569' }}>📍 Sonari, Jamshedpur · 📞 +91 79798 77450</p>
             <p style={{ marginTop: '0.15rem', fontSize: '0.72rem', color: '#64748b' }}>🕒 24/7 Cab Service · Police Verified Drivers</p>
           </div>
         </nav>

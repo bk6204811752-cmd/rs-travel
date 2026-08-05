@@ -97,7 +97,7 @@ export default function FaqPage() {
           </div>
           <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900, lineHeight: 1.15, marginBottom: '1rem' }}>
             <span className="gold-text">RS Travel — Help &amp; FAQ</span><br />
-            <span style={{ fontSize: 'clamp(1rem, 2.5vw, 1.3rem)', color: '#94a3b8', fontWeight: 600 }}>
+            <span style={{ fontSize: 'clamp(1rem, 2.5vw, 1.3rem)', color: '#e2e8f0', fontWeight: 600 }}>
               Cab Booking Questions Answered for Jamshedpur &amp; Jharkhand
             </span>
           </h1>

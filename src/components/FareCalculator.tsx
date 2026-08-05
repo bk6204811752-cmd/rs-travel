@@ -37,7 +37,7 @@ export default function FareCalculator() {
   return (
     <div className="glass-card zoom-animation" style={{ marginTop: '2.5rem', marginBottom: '2.5rem', border: '1px solid var(--primary)' }}>
       <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
-        <h2 style={{ fontSize: 'clamp(1.2rem, 3vw, 1.6rem)', color: '#f8fafc', marginBottom: '0.25rem' }}>
+        <h2 style={{ fontSize: 'clamp(1.2rem, 3vw, 1.6rem)', color: '#0f172a', marginBottom: '0.25rem' }}>
           <span className="gold-text">Instant Fare</span> Calculator
         </h2>
         <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
@@ -92,13 +92,13 @@ export default function FareCalculator() {
       </div>
 
       {distance > 0 && (
-        <div style={{ marginTop: '2rem', padding: '1.5rem', background: 'rgba(249, 115, 22, 0.08)', borderRadius: '16px', border: '1px dashed rgba(249, 115, 22, 0.3)', textAlign: 'center' }}>
+        <div style={{ marginTop: '2rem', padding: '1.5rem', background: 'rgba(249, 115, 22, 0.06)', borderRadius: '16px', border: '1px dashed rgba(249, 115, 22, 0.3)', textAlign: 'center' }}>
           <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '0.25rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Estimated Fare</p>
-          <div style={{ fontSize: '2.5rem', fontWeight: 900, color: '#f8fafc', marginBottom: '0.5rem', textShadow: '0 0 15px rgba(249,115,22,0.2)' }}>
+          <div style={{ fontSize: '2.5rem', fontWeight: 900, color: '#0f172a', marginBottom: '0.5rem' }}>
             ₹{totalEstimate.toLocaleString()}
           </div>
           
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap', fontSize: '0.8rem', color: '#94a3b8' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap', fontSize: '0.8rem', color: '#475569' }}>
             <span>🚗 {selectedVehicle.shortName} (₹{selectedVehicle.perKmRate}/km)</span>
             <span>🛣️ {effectiveKm} km billed</span>
             {driverAllowance > 0 && <span>👨‍✈️ Driver Allowance: ₹{driverAllowance}</span>}

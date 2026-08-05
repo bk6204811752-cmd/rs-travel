@@ -87,11 +87,11 @@ export default function HomePage() {
             </div>
             <h1 style={{ fontSize: 'clamp(1.6rem, 5vw, 3rem)', fontWeight: 900, lineHeight: 1.15, marginBottom: '0.85rem' }}>
               <span className="gold-text">Best Cab Service in Jamshedpur</span> (Sonari & Tata)<br />
-              <span style={{ fontSize: 'clamp(0.85rem, 2.5vw, 1.5rem)', color: '#94a3b8', fontWeight: 600 }}>
+              <span style={{ fontSize: 'clamp(0.85rem, 2.5vw, 1.5rem)', color: '#e2e8f0', fontWeight: 600 }}>
                 15 Cities • 50+ Cabs • 24/7 Taxi Service • ₹11/km
               </span>
             </h1>
-            <p style={{ color: '#94a3b8', fontSize: 'clamp(0.85rem, 2.5vw, 1rem)', maxWidth: '550px', marginBottom: '1.25rem', lineHeight: 1.6 }}>
+            <p style={{ color: '#cbd5e1', fontSize: 'clamp(0.85rem, 2.5vw, 1rem)', maxWidth: '550px', marginBottom: '1.25rem', lineHeight: 1.6 }}>
               RS Travel offers dependable AC cabs across Jamshedpur (Sonari, Bistupur, Mango, Sakchi), Ranchi, Dhanbad & Bokaro — police-verified drivers, GPS-tracked fleet, no hidden charges. One way, outstation & local taxi available 24/7.
             </p>
             <div className="hero-btn-group">

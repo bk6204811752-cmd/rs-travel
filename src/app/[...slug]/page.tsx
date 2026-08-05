@@ -434,7 +434,7 @@ function CityHubPage({ citySlug }: { citySlug: string }) {
             </div>
             <h1 style={{ marginBottom: '1rem' }}>
               <span className="gold-text">{city.seoH1 || `Cab Service in ${isJSR ? 'Jamshedpur/Tata (Tatanagar)' : city.name}`}</span><br />
-              <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', color: '#94a3b8', fontWeight: 600 }}>
+              <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', color: '#e2e8f0', fontWeight: 600 }}>
                 Book 24/7 | +91 79798 77450 | AC Cabs from ₹{city.localFare.hatchback_4hr}
               </span>
             </h1>
@@ -819,7 +819,7 @@ function ServiceInCityPage({ citySlug, serviceSlug }: { citySlug: string; servic
           ]} />
           <h1 style={{ marginBottom: '1rem' }}>
             <span className="gold-text">{service.name} in {displayCityName}</span><br />
-            <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', color: '#94a3b8', fontWeight: 600 }}>+91 79798 77450 | ₹{service.startingPrice} {service.priceUnit}</span>
+            <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', color: '#e2e8f0', fontWeight: 600 }}>+91 79798 77450 | ₹{service.startingPrice} {service.priceUnit}</span>
           </h1>
           <BookingWidget defaultFrom={city.name} cityName={city.name} />
         </div>
@@ -954,7 +954,7 @@ function FleetInCityPage({ citySlug, fleetSlug }: { citySlug: string; fleetSlug:
           ]} />
           <h1 style={{ marginBottom: '1rem' }}>
             <span className="gold-text">{vehicle.name} in {displayCityName}</span><br />
-            <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', color: '#94a3b8', fontWeight: 600 }}>Book Now +91 79798 77450 | ₹{vehicle.perKmRate}/km</span>
+            <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', color: '#e2e8f0', fontWeight: 600 }}>Book Now +91 79798 77450 | ₹{vehicle.perKmRate}/km</span>
           </h1>
           <BookingWidget defaultFrom={city.name} cityName={city.name} />
         </div>
@@ -1103,7 +1103,7 @@ function OutstationRoutePage({ from, to }: { from: string; to: string }) {
           ]} />
           <h1 style={{ marginBottom: '1rem' }}>
             <span className="gold-text">{fromName} to {toName} Cab Service 2026</span><br />
-            <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', color: '#94a3b8', fontWeight: 600 }}>₹{route.fares.hatchback.toLocaleString()} Onwards | {route.distanceKm} km | {route.durationHrs} hrs | ☎ +91 79798 77450</span>
+            <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', color: '#e2e8f0', fontWeight: 600 }}>₹{route.fares.hatchback.toLocaleString()} Onwards | {route.distanceKm} km | {route.durationHrs} hrs | ☎ +91 79798 77450</span>
           </h1>
           <BookingWidget defaultFrom={route.fromName} defaultTo={route.toName} />
         </div>
@@ -1419,7 +1419,7 @@ function LocalRoutePage({ citySlug, routeSlug }: { citySlug: string; routeSlug: 
           ]} />
           <h1 style={{ marginBottom: '1rem' }}>
             <span className="gold-text">Taxi: {lr.fromArea} to {lr.toArea}</span><br />
-            <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', color: '#94a3b8', fontWeight: 600 }}>{lr.cityName} | ₹{lr.startingFare} | +91 79798 77450</span>
+            <span style={{ fontSize: 'clamp(0.9rem, 2vw, 1.2rem)', color: '#e2e8f0', fontWeight: 600 }}>{lr.cityName} | ₹{lr.startingFare} | +91 79798 77450</span>
           </h1>
           <BookingWidget defaultFrom={`${lr.fromArea}, ${lr.cityName}`} defaultTo={`${lr.toArea}, ${lr.cityName}`} cityName={lr.cityName} />
         </div>

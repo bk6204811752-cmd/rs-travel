@@ -29,7 +29,7 @@ export default function ContactPage() {
         <div className="container-main" style={{ position: 'relative', zIndex: 1, paddingTop: '6rem', paddingBottom: '3rem' }}>
           <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900, lineHeight: 1.15, marginBottom: '1rem' }}>
             <span className="gold-text">Contact RS Travel</span><br />
-            <span style={{ fontSize: 'clamp(1rem, 2.5vw, 1.3rem)', color: '#94a3b8', fontWeight: 600 }}>
+            <span style={{ fontSize: 'clamp(1rem, 2.5vw, 1.3rem)', color: '#e2e8f0', fontWeight: 600 }}>
               Jamshedpur&apos;s Fastest Cab Booking — Call, WhatsApp, or Email
             </span>
           </h1>

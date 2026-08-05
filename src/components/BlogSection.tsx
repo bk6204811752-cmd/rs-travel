@@ -124,12 +124,13 @@ export default function BlogSection({ pageName, type }: BlogSectionProps) {
             href={`/blog/${article.slug}`}
             style={{
               display: 'block',
-              background: 'var(--card-bg)',
-              border: '1px solid var(--card-border)',
+              background: '#ffffff',
+              border: '1px solid #e2e8f0',
               borderRadius: '16px',
               padding: '1.25rem',
               textDecoration: 'none',
               transition: 'all 0.3s ease',
+              boxShadow: '0 4px 16px rgba(15, 23, 42, 0.05)',
             }}
           >
             <div
