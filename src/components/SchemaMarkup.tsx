@@ -15,7 +15,7 @@ export default function SchemaMarkup({ type, data }: SchemaMarkupProps) {
       "telephone": "+917979877450",
       "email": "info@rstravels.com",
       "url": "https://rstravelsjsr.com",
-      "logo": "https://rstravelsjsr.com/RSLOGO.svg",
+      "logo": "https://rstravelsjsr.com/logo.png",
       "image": "https://rstravelsjsr.com/background/rsbg1.webp",
       "description": `RS Travel — Jamshedpur's most trusted cab service since 2018. Book reliable AC cabs in ${data.areaServed || 'Jharkhand'} with police-verified drivers, GPS tracking, and transparent pricing. Available 24/7.`,
       "address": {

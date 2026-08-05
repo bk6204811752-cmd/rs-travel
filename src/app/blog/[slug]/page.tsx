@@ -867,7 +867,7 @@ export default function BlogArticlePage({ params }: { params: { slug: string } }
             "publisher": {
               "@type": "Organization",
               "name": "RS Travel",
-              "logo": { "@type": "ImageObject", "url": "https://rstravelsjsr.com/logo.webp" },
+              "logo": { "@type": "ImageObject", "url": "https://rstravelsjsr.com/logo.png" },
             },
             "datePublished": "2026-04-15T00:00:00.000Z",
             "dateModified": "2026-04-20T00:00:00.000Z",

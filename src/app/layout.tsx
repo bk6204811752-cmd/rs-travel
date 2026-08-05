@@ -77,15 +77,14 @@ export const metadata: Metadata = {
   category: 'travel',
   icons: {
     icon: [
-      { url: '/logo.png', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/logo.png', type: 'image/png', sizes: '512x512' },
       { url: '/RSLOGO.svg', type: 'image/svg+xml' },
-      { url: '/icon.svg', type: 'image/svg+xml' },
     ],
     apple: [
-      { url: '/logo.png', type: 'image/png' },
-      { url: '/RSLOGO.svg', type: 'image/svg+xml' },
+      { url: '/logo.png', sizes: '512x512', type: 'image/png' },
     ],
-    shortcut: ['/logo.png', '/RSLOGO.svg'],
+    shortcut: ['/favicon.ico', '/logo.png'],
   },
   manifest: '/site.webmanifest',
 };
@@ -228,9 +227,9 @@ export default function RootLayout({
               url: "https://rstravelsjsr.com",
               logo: {
                 "@type": "ImageObject",
-                url: "https://rstravelsjsr.com/logo.webp",
-                width: 200,
-                height: 200,
+                url: "https://rstravelsjsr.com/logo.png",
+                width: 512,
+                height: 512,
               },
               foundingDate: "2018",
               founder: { "@type": "Person", name: "RS Travel Team" },
@@ -338,6 +337,21 @@ export default function RootLayout({
             <div className="footer-bottom">
               <p>© {new Date().getFullYear()} RS Travel. All rights reserved. | Jamshedpur&apos;s Trusted Cab Service Since 2018</p>
               <p style={{ marginTop: '0.25rem' }}>📞 +91 79798 77450 | ✉️ info@rstravels.com | 🌐 rstravelsjsr.com | 📍 Sonari, Jamshedpur</p>
+              <p style={{ marginTop: '0.5rem', fontSize: '0.85rem', opacity: 0.9 }}>
+                Developed by{' '}
+                <a
+                  href="https://basant.me"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: '#f59e0b',
+                    fontWeight: 600,
+                    textDecoration: 'none',
+                  }}
+                >
+                  BASANT KUMAR
+                </a>
+              </p>
             </div>
           </div>
         </footer>
