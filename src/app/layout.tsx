@@ -78,13 +78,15 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-48x48.png', type: 'image/png', sizes: '48x48' },
+      { url: '/favicon-192x192.png', type: 'image/png', sizes: '192x192' },
       { url: '/logo.png', type: 'image/png', sizes: '512x512' },
       { url: '/RSLOGO.svg', type: 'image/svg+xml' },
     ],
     apple: [
-      { url: '/logo.png', sizes: '512x512', type: 'image/png' },
+      { url: '/apple-icon.png', sizes: '512x512', type: 'image/png' },
     ],
-    shortcut: ['/favicon.ico', '/logo.png'],
+    shortcut: ['/favicon.ico'],
   },
   manifest: '/site.webmanifest',
 };
@@ -104,10 +106,12 @@ export default function RootLayout({
         <meta name="theme-color" content="#1a73e8" />
         <link rel="alternate" hrefLang="en-IN" href="https://rstravelsjsr.com" />
         <link rel="alternate" hrefLang="x-default" href="https://rstravelsjsr.com" />
-        {/* Favicon fallback links for all browsers & search engines */}
-        <link rel="icon" type="image/png" href="/logo.png" />
+        {/* Favicon explicit link tags for search engines & browsers */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
         <link rel="icon" type="image/svg+xml" href="/RSLOGO.svg" />
-        <link rel="apple-touch-icon" href="/logo.png" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
         {/* TaxiService + LocalBusiness Schema */}
         <script
           type="application/ld+json"
