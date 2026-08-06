@@ -22,6 +22,10 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/_next/'],
       },
       {
+        userAgent: ['AhrefsBot', 'SemrushBot', 'PetalBot', 'Bytespider', 'MJ12bot', 'DotBot'],
+        disallow: ['/'],
+      },
+      {
         userAgent: '*',
         allow: '/',
         disallow: ['/api/', '/_next/', '/fonts/'],
