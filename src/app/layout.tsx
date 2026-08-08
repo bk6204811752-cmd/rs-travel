@@ -106,10 +106,10 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="en-IN" href="https://www.rstravelsjsr.com" />
         <link rel="alternate" hrefLang="x-default" href="https://www.rstravelsjsr.com" />
         {/* Favicon explicit link tags for Google Search & browsers */}
-        <link rel="icon" href="https://www.rstravelsjsr.com/favicon-48x48.png" sizes="48x48" type="image/png" />
-        <link rel="icon" href="https://www.rstravelsjsr.com/favicon-192x192.png" sizes="192x192" type="image/png" />
-        <link rel="icon" href="https://www.rstravelsjsr.com/logo.png" sizes="512x512" type="image/png" />
-        <link rel="apple-touch-icon" href="https://www.rstravelsjsr.com/apple-icon.png" />
+        <link rel="icon" href="/favicon-48x48.png" sizes="48x48" type="image/png" />
+        <link rel="icon" href="/favicon-192x192.png" sizes="192x192" type="image/png" />
+        <link rel="icon" href="/logo.png" sizes="512x512" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
         {/* TaxiService + LocalBusiness Schema */}
         <script
           type="application/ld+json"
