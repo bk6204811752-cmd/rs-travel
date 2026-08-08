@@ -56,18 +56,18 @@ export const metadata: Metadata = {
     'book cab online jamshedpur', 'cab booking jamshedpur', 'taxi booking online jharkhand',
     'whatsapp cab booking jamshedpur', '24/7 cab service jamshedpur',
   ],
-  alternates: { canonical: 'https://rstravelsjsr.com' },
+  alternates: { canonical: 'https://www.rstravelsjsr.com' },
   openGraph: {
     title: 'RS Travel — #1 Cab Service Jamshedpur (Sonari) ₹999',
     description: 'Book reliable AC cabs in Jamshedpur (Sonari) & Ranchi — 15+ cities, 50+ cabs, 24/7. Jamshedpur→Ranchi ₹1,499. 30K+ happy rides. ☎ +917979877450',
-    url: 'https://rstravelsjsr.com',
-    images: [{ url: 'https://rstravelsjsr.com/background/rsbg1.webp', width: 1200, height: 630, alt: 'RS Travel — Best Cab Service in Jamshedpur Sonari and Jharkhand' }],
+    url: 'https://www.rstravelsjsr.com',
+    images: [{ url: 'https://www.rstravelsjsr.com/background/rsbg1.webp', width: 1200, height: 630, alt: 'RS Travel — Best Cab Service in Jamshedpur Sonari and Jharkhand' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Cab Service Jamshedpur ₹999 | RS Travel',
     description: '#1 rated. 30K+ rides. 24/7 AC cabs. ☎ +917979877450',
-    images: ['https://rstravelsjsr.com/background/rsbg1.webp'],
+    images: ['https://www.rstravelsjsr.com/background/rsbg1.webp'],
   },
 };
 
@@ -362,7 +362,7 @@ export default function HomePage() {
                   '@type': 'ListItem',
                   'position': i + 1,
                   'name': `Cab Service in ${city.name}`,
-                  'url': `https://rstravelsjsr.com/cab-service-${city.slug}`,
+                  'url': `https://www.rstravelsjsr.com/cab-service-${city.slug}`,
                 })),
               }),
             }}

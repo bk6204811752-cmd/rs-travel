@@ -10,7 +10,7 @@ import { getAllBlogSlugs } from '@/lib/blogSlugs';
  * Sitemap generator for rstravelsjsr.com — optimized for Google crawl budget.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://rstravelsjsr.com';
+  const baseUrl = 'https://www.rstravelsjsr.com';
 
   // Fixed dates — only update these when you ACTUALLY update content
   const HOMEPAGE_DATE = '2026-08-03';

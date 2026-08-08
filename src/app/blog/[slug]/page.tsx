@@ -771,11 +771,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       `${formattedTitle.toLowerCase()} booking`,
       'RS Travel blog', 'jharkhand travel guide', 'cab service tips',
     ],
-    alternates: { canonical: `https://rstravelsjsr.com/blog/${params.slug}` },
+    alternates: { canonical: `https://www.rstravelsjsr.com/blog/${params.slug}` },
     openGraph: {
       title: metaTitle,
       description: content.intro.substring(0, 155) + '...',
-      url: `https://rstravelsjsr.com/blog/${params.slug}`,
+      url: `https://www.rstravelsjsr.com/blog/${params.slug}`,
       type: 'article',
       images: [{ url: '/background/rsbg1.webp', width: 1200, height: 630, alt: formattedTitle }],
     },
@@ -867,11 +867,11 @@ export default function BlogArticlePage({ params }: { params: { slug: string } }
             "publisher": {
               "@type": "Organization",
               "name": "RS Travel",
-              "logo": { "@type": "ImageObject", "url": "https://rstravelsjsr.com/logo.png" },
+              "logo": { "@type": "ImageObject", "url": "https://www.rstravelsjsr.com/logo.png" },
             },
             "datePublished": "2026-04-15T00:00:00.000Z",
             "dateModified": "2026-04-20T00:00:00.000Z",
-            "mainEntityOfPage": `https://rstravelsjsr.com/blog/${params.slug}`,
+            "mainEntityOfPage": `https://www.rstravelsjsr.com/blog/${params.slug}`,
             "description": content.intro.substring(0, 155),
           }),
         }}

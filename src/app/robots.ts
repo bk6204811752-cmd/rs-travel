@@ -32,7 +32,7 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: [
-      'https://rstravelsjsr.com/sitemap.xml',
+      'https://www.rstravelsjsr.com/sitemap.xml',
     ],
   };
 }

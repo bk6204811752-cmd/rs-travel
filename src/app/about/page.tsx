@@ -13,11 +13,11 @@ export const metadata: Metadata = {
     'trusted taxi company sonari', 'people first cab service jamshedpur',
     'rs travel fleet details', 'rs travel contact sonari', 'rs travel reviews',
   ],
-  alternates: { canonical: 'https://rstravelsjsr.com/about' },
+  alternates: { canonical: 'https://www.rstravelsjsr.com/about' },
   openGraph: {
     title: 'About RS Travel | Sonari, Jamshedpur — People-First Cab Service',
     description: 'Founded in 2018 in Sonari, Jamshedpur. 30,000+ completed rides across Jharkhand and beyond. Learn our story.',
-    url: 'https://rstravelsjsr.com/about',
+    url: 'https://www.rstravelsjsr.com/about',
     images: [{ url: '/background/rsbg1.webp', width: 1200, height: 630, alt: 'About RS Travel — Jamshedpur Cab Service from Sonari' }],
   },
 };

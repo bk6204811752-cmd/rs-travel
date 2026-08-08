@@ -166,11 +166,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           ...(city.nearMeKeywords || []),
           ...(city.localKeywords || []),
         ],
-        alternates: { canonical: `https://rstravelsjsr.com/cab-service-${city.slug}` },
+        alternates: { canonical: `https://www.rstravelsjsr.com/cab-service-${city.slug}` },
         openGraph: {
           title: `Top Cab Service in ${titleName} 2026 | RS Travel`,
           description: `Reserve an AC cab in ${seoName}. One way, round trip, outstation, airport & local rides from ₹${city.localFare.hatchback_4hr}. Verified drivers, GPS tracked. ☎ +917979877450`,
-          url: `https://rstravelsjsr.com/cab-service-${city.slug}`,
+          url: `https://www.rstravelsjsr.com/cab-service-${city.slug}`,
           images: [{ url: '/background/rsbg1.webp', width: 1200, height: 630, alt: `Top Cab Service in ${titleName} — RS Travel Jharkhand` }],
         },
         twitter: {
@@ -218,11 +218,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           `cheap ${service.name.toLowerCase()} ${city.name.toLowerCase()}`,
           `best ${service.name.toLowerCase()} ${city.name.toLowerCase()}`,
         ],
-        alternates: { canonical: `https://rstravelsjsr.com/${city.slug}/${service.slug}` },
+        alternates: { canonical: `https://www.rstravelsjsr.com/${city.slug}/${service.slug}` },
         openGraph: {
           title: `${service.name} in ${titleName} | RS Travel`,
           description: `₹${service.startingPrice} ${service.priceUnit}. Book now ☎ +917979877450`,
-          url: `https://rstravelsjsr.com/${city.slug}/${service.slug}`,
+          url: `https://www.rstravelsjsr.com/${city.slug}/${service.slug}`,
           images: [{ url: '/background/rsbg1.webp', width: 1200, height: 630, alt: `${service.name} in ${titleName}` }],
         },
       };
@@ -254,11 +254,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           `ac taxi ${vehicle.shortName.toLowerCase()} ${city.name.toLowerCase()}`,
           ...(city.slug === 'jamshedpur' ? [`${vehicle.shortName.toLowerCase()} tata`, `${vehicle.shortName.toLowerCase()} tatanagar`, `${vehicle.name.toLowerCase()} hire tata`] : []),
         ],
-        alternates: { canonical: `https://rstravelsjsr.com/${city.slug}/${vehicle.slug}` },
+        alternates: { canonical: `https://www.rstravelsjsr.com/${city.slug}/${vehicle.slug}` },
         openGraph: {
           title: `${vehicle.name} in ${city.name} | RS Travel`,
           description: `₹${vehicle.perKmRate}/km | ${vehicle.seatingCapacity} seater. Book now ☎ +917979877450`,
-          url: `https://rstravelsjsr.com/${city.slug}/${vehicle.slug}`,
+          url: `https://www.rstravelsjsr.com/${city.slug}/${vehicle.slug}`,
           images: [{ url: '/background/rsbg1.webp', width: 1200, height: 630, alt: `${vehicle.name} in ${city.name}` }],
         },
       };
@@ -304,11 +304,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           `${route.fromName.toLowerCase()} to ${route.toName.toLowerCase()} by car`,
           ...hindiRouteKw,
         ],
-        alternates: { canonical: `https://rstravelsjsr.com/${route.from}-to-${route.to}-cab` },
+        alternates: { canonical: `https://www.rstravelsjsr.com/${route.from}-to-${route.to}-cab` },
         openGraph: {
           title: `${fromName} to ${toName} Cab 2026 \u2014 \u20b9${route.fares.hatchback.toLocaleString()} Onwards`,
           description: `${route.distanceKm}km \u2022 ${route.durationHrs}hrs. AC cab, toll included, verified driver. Book now \u260e +917979877450`,
-          url: `https://rstravelsjsr.com/${route.from}-to-${route.to}-cab`,
+          url: `https://www.rstravelsjsr.com/${route.from}-to-${route.to}-cab`,
           images: [{ url: '/background/rsbg1.webp', width: 1200, height: 630, alt: `${seoFromName} to ${seoToName} Cab Service — RS Travel` }],
         },
         twitter: {
@@ -344,11 +344,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           `hourly taxi ${lr.cityName.toLowerCase()}`,
           `car hire ${lr.fromArea.toLowerCase()} ${lr.cityName.toLowerCase()}`,
         ],
-        alternates: { canonical: `https://rstravelsjsr.com/local-taxi-${lr.city}/${lr.slug}` },
+        alternates: { canonical: `https://www.rstravelsjsr.com/local-taxi-${lr.city}/${lr.slug}` },
         openGraph: {
           title: `Taxi ${lr.fromArea} to ${lr.toArea} \u2014 \u20b9${lr.startingFare}`,
           description: `${lr.distanceKm}km \u2022 ${lr.durationMin}min. Book now \u260e +917979877450`,
-          url: `https://rstravelsjsr.com/local-taxi-${lr.city}/${lr.slug}`,
+          url: `https://www.rstravelsjsr.com/local-taxi-${lr.city}/${lr.slug}`,
           images: [{ url: '/background/rsbg1.webp', width: 1200, height: 630, alt: `Taxi ${lr.fromArea} to ${lr.toArea}` }],
         },
       };

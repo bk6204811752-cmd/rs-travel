@@ -15,7 +15,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
       "@type": "ListItem",
       "position": index + 1,
       "name": item.label,
-      ...(item.href ? { "item": `https://rstravelsjsr.com${item.href}` } : {}),
+      ...(item.href ? { "item": `https://www.rstravelsjsr.com${item.href}` } : {}),
     })),
   };
 

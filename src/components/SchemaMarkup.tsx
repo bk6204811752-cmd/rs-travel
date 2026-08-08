@@ -14,9 +14,9 @@ export default function SchemaMarkup({ type, data }: SchemaMarkupProps) {
       "name": "RS Travel",
       "telephone": "+917979877450",
       "email": "info@rstravels.com",
-      "url": "https://rstravelsjsr.com",
-      "logo": "https://rstravelsjsr.com/logo.png",
-      "image": "https://rstravelsjsr.com/background/rsbg1.webp",
+      "url": "https://www.rstravelsjsr.com",
+      "logo": "https://www.rstravelsjsr.com/logo.png",
+      "image": "https://www.rstravelsjsr.com/background/rsbg1.webp",
       "description": `RS Travel — Jamshedpur's most trusted cab service since 2018. Book reliable AC cabs in ${data.areaServed || 'Jharkhand'} with police-verified drivers, GPS tracking, and transparent pricing. Available 24/7.`,
       "address": {
         "@type": "PostalAddress",
@@ -54,7 +54,7 @@ export default function SchemaMarkup({ type, data }: SchemaMarkupProps) {
         ],
       },
       "sameAs": [
-        "https://rstravelsjsr.com",
+        "https://www.rstravelsjsr.com",
         "https://share.google/30LBOl3p6lv0tKRyX"
       ],
     });
@@ -68,7 +68,7 @@ export default function SchemaMarkup({ type, data }: SchemaMarkupProps) {
           "@type": "ListItem",
           "position": index + 1,
           "name": item.name,
-          "item": item.url ? `https://rstravelsjsr.com${item.url}` : undefined,
+          "item": item.url ? `https://www.rstravelsjsr.com${item.url}` : undefined,
         })),
       });
     }
@@ -101,7 +101,7 @@ export default function SchemaMarkup({ type, data }: SchemaMarkupProps) {
           "@type": "LocalBusiness",
           "name": "RS Travel",
           "telephone": "+917979877450",
-          "url": "https://rstravelsjsr.com",
+          "url": "https://www.rstravelsjsr.com",
         },
         "offers": {
           "@type": "AggregateOffer",
@@ -149,7 +149,7 @@ export default function SchemaMarkup({ type, data }: SchemaMarkupProps) {
           "@type": "LocalBusiness",
           "name": "RS Travel",
           "telephone": "+917979877450",
-          "url": "https://rstravelsjsr.com",
+          "url": "https://www.rstravelsjsr.com",
         },
         "areaServed": data.areaServed,
         "serviceType": "Taxi Service",
@@ -179,7 +179,7 @@ export default function SchemaMarkup({ type, data }: SchemaMarkupProps) {
           "@type": "LocalBusiness",
           "name": "RS Travel",
           "telephone": "+917979877450",
-          "url": "https://rstravelsjsr.com",
+          "url": "https://www.rstravelsjsr.com",
         },
         "areaServed": data.areaServed,
         "serviceType": "Vehicle Rental",

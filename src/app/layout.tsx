@@ -27,11 +27,11 @@ export const metadata: Metadata = {
   },
   description:
     "#1 cab service in Jamshedpur (Sonari) ✅ AC cabs ₹999 onwards ✅ 24/7 ✅ Police-verified drivers ✅ GPS tracked ✅ 30,000+ happy customers. Outstation, airport & local taxi. ☎ +917979877450",
-  metadataBase: new URL("https://rstravelsjsr.com"),
+  metadataBase: new URL("https://www.rstravelsjsr.com"),
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://rstravelsjsr.com",
+    url: "https://www.rstravelsjsr.com",
     siteName: "RS Travel",
     title: "RS Travel — #1 Cab Service Jamshedpur (Sonari) & Jharkhand",
     description: "Book reliable AC cab service in Jamshedpur (Sonari), Ranchi, Dhanbad, Bokaro & 15+ Jharkhand cities. Police-verified drivers, fixed pricing, 24/7 availability. Jamshedpur to Ranchi cab ₹2,499. 30,000+ happy customers. Call +917979877450.",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://rstravelsjsr.com',
+    canonical: 'https://www.rstravelsjsr.com',
   },
   other: {
     'geo.region': 'IN-JH',
@@ -81,7 +81,6 @@ export const metadata: Metadata = {
       { url: '/favicon-48x48.png', type: 'image/png', sizes: '48x48' },
       { url: '/favicon-192x192.png', type: 'image/png', sizes: '192x192' },
       { url: '/logo.png', type: 'image/png', sizes: '512x512' },
-      { url: '/RSLOGO.svg', type: 'image/svg+xml' },
     ],
     apple: [
       { url: '/apple-icon.png', sizes: '512x512', type: 'image/png' },
@@ -104,14 +103,13 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         {/* Preload critical font to prevent render-blocking */}
         <meta name="theme-color" content="#1a73e8" />
-        <link rel="alternate" hrefLang="en-IN" href="https://rstravelsjsr.com" />
-        <link rel="alternate" hrefLang="x-default" href="https://rstravelsjsr.com" />
-        {/* Favicon explicit link tags for search engines & browsers */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
-        <link rel="icon" type="image/svg+xml" href="/RSLOGO.svg" />
-        <link rel="apple-touch-icon" href="/apple-icon.png" />
+        <link rel="alternate" hrefLang="en-IN" href="https://www.rstravelsjsr.com" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.rstravelsjsr.com" />
+        {/* Favicon explicit link tags for Google Search & browsers */}
+        <link rel="icon" href="https://www.rstravelsjsr.com/favicon-48x48.png" sizes="48x48" type="image/png" />
+        <link rel="icon" href="https://www.rstravelsjsr.com/favicon-192x192.png" sizes="192x192" type="image/png" />
+        <link rel="icon" href="https://www.rstravelsjsr.com/logo.png" sizes="512x512" type="image/png" />
+        <link rel="apple-touch-icon" href="https://www.rstravelsjsr.com/apple-icon.png" />
         {/* TaxiService + LocalBusiness Schema */}
         <script
           type="application/ld+json"
@@ -119,15 +117,14 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": ["LocalBusiness", "TaxiService"],
-              "@id": "https://rstravelsjsr.com/#organization",
+              "@id": "https://www.rstravelsjsr.com/#organization",
               name: "RS Travel",
               alternateName: ["RS Cab Service", "RS Travel Jamshedpur", "RS Travels Jamshedpur", "RS Travel Sonari"],
-              url: "https://rstravelsjsr.com",
-              logo: "https://rstravelsjsr.com/logo.png",
+              url: "https://www.rstravelsjsr.com",
+              logo: "https://www.rstravelsjsr.com/logo.png",
               image: [
-                "https://rstravelsjsr.com/logo.png",
-                "https://rstravelsjsr.com/RSLOGO.svg",
-                "https://rstravelsjsr.com/background/rsbg1.webp",
+                "https://www.rstravelsjsr.com/logo.png",
+                "https://www.rstravelsjsr.com/background/rsbg1.webp",
               ],
               telephone: "+917979877450",
               email: "info@rstravels.com",
@@ -210,10 +207,10 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "RS Travel",
-              url: "https://rstravelsjsr.com",
+              url: "https://www.rstravelsjsr.com",
               potentialAction: {
                 "@type": "SearchAction",
-                target: "https://rstravelsjsr.com/?q={search_term_string}",
+                target: "https://www.rstravelsjsr.com/?q={search_term_string}",
                 "query-input": "required name=search_term_string",
               },
             }),
@@ -226,19 +223,19 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "@id": "https://rstravelsjsr.com/#organization",
+              "@id": "https://www.rstravelsjsr.com/#organization",
               name: "RS Travel",
-              url: "https://rstravelsjsr.com",
+              url: "https://www.rstravelsjsr.com",
               logo: {
                 "@type": "ImageObject",
-                url: "https://rstravelsjsr.com/logo.png",
+                url: "https://www.rstravelsjsr.com/logo.png",
                 width: 512,
                 height: 512,
               },
               foundingDate: "2018",
               founder: { "@type": "Person", name: "RS Travel Team" },
               sameAs: [
-                "https://rstravelsjsr.com",
+                "https://www.rstravelsjsr.com",
                 "https://share.google/30LBOl3p6lv0tKRyX"
               ],
               contactPoint: {

@@ -17,11 +17,11 @@ export const metadata: Metadata = {
     'local taxi fare jamshedpur', 'innova rate per km jamshedpur',
     'tempo traveller rate jamshedpur', 'rs travel fare list 2026',
   ],
-  alternates: { canonical: 'https://rstravelsjsr.com/fare-chart' },
+  alternates: { canonical: 'https://www.rstravelsjsr.com/fare-chart' },
   openGraph: {
     title: 'Fare Chart 2026 | RS Travel — All Routes & Rates',
     description: 'Compare cab fares across all Jharkhand routes with RS Travel. Hatchback ₹11/km, Sedan ₹13/km, SUV ₹16/km.',
-    url: 'https://rstravelsjsr.com/fare-chart',
+    url: 'https://www.rstravelsjsr.com/fare-chart',
     images: [{ url: '/background/rsbg1.webp', width: 1200, height: 630, alt: 'RS Travel Fare Chart 2026' }],
   },
 };

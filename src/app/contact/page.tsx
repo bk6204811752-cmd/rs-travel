@@ -13,11 +13,11 @@ export const metadata: Metadata = {
     'taxi booking number jamshedpur', 'cab service contact jharkhand',
     'rs travel sonari jamshedpur', 'contact rs travels',
   ],
-  alternates: { canonical: 'https://rstravelsjsr.com/contact' },
+  alternates: { canonical: 'https://www.rstravelsjsr.com/contact' },
   openGraph: {
     title: 'Contact RS Travel | ☎ +917979877450',
     description: 'Call, WhatsApp, or email us. 24/7 cab booking across Jharkhand from Sonari, Jamshedpur.',
-    url: 'https://rstravelsjsr.com/contact',
+    url: 'https://www.rstravelsjsr.com/contact',
     images: [{ url: '/background/rsbg1.webp', width: 1200, height: 630, alt: 'Contact RS Travel' }],
   },
 };
@@ -143,7 +143,7 @@ export default function ContactPage() {
             "@context": "https://schema.org",
             "@type": "ContactPage",
             "name": "Contact RS Travel",
-            "url": "https://rstravelsjsr.com/contact",
+            "url": "https://www.rstravelsjsr.com/contact",
             "mainEntity": {
               "@type": "LocalBusiness",
               "name": "RS Travel",

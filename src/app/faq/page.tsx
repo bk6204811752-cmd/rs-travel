@@ -14,11 +14,11 @@ export const metadata: Metadata = {
     'cab fare jamshedpur 2026', 'rs travel payment options', 'rs travel sonari contact',
     'outstation cab questions jharkhand', 'airport cab jamshedpur faq',
   ],
-  alternates: { canonical: 'https://rstravelsjsr.com/faq' },
+  alternates: { canonical: 'https://www.rstravelsjsr.com/faq' },
   openGraph: {
     title: 'RS Travel FAQ 2026 | Cab Booking Questions Answered',
     description: 'Everything you need to know before booking with RS Travel in Jamshedpur, Jharkhand.',
-    url: 'https://rstravelsjsr.com/faq',
+    url: 'https://www.rstravelsjsr.com/faq',
     images: [{ url: '/background/rsbg1.webp', width: 1200, height: 630, alt: 'RS Travel FAQ — Jamshedpur Cab Service Help' }],
   },
 };
