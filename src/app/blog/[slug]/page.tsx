@@ -713,6 +713,146 @@ function generateUniqueContent(slug: string): BlogContent {
     };
   }
 
+  // ============================================================
+  // RS TRAVEL-SPECIFIC SLUGS — 100% Unique, no sreetravel.com overlap
+  // ============================================================
+
+  if (slug === 'rs-travel-sonari-jamshedpur-story') {
+    return {
+      category: 'About Us', readTime: '5 min read',
+      intro: `RS Travel began in Sonari, Jamshedpur — one of the city's most well-connected localities, home to Sonari Airport (IXW) and at the crossroads of Jamshedpur's eastern and western halves. We serve 15+ Jharkhand cities with 50+ GPS-tracked AC cabs and police-verified drivers.`,
+      sections: [
+        { heading: "RS Travel's Sonari Base — Strategic Advantage", paragraphs: [
+          `Sonari is uniquely positioned in Jamshedpur — minutes from Sonari Airport (IXW), close to Mango township, accessible from both Bistupur (south) and Adityapur (north). Our Sonari base lets RS Travel serve east Jamshedpur's underserved areas — Kadma, Agrico, Jugsalai, Golmuri, Sonari Colony — with shorter deadhead km, faster pickups, and better pricing for east-JSR customers.`,
+          `With 50+ GPS-tracked AC cabs, police-verified drivers, and 24/7 availability on +91 79798 77450, RS Travel covers all of Jamshedpur and 15+ Jharkhand cities. No app needed — WhatsApp and confirm in 2 minutes.`,
+        ]},
+        { heading: 'Three Principles Behind RS Travel', paragraphs: [
+          `Price transparency (fare you see is fare you pay — no surge multipliers, no surprise tolls), Driver accountability (Aadhaar-verified, police-checked, customer-reviewed after every trip), and genuine 24/7 availability — even on Chhath Puja eve and December 31st when most cabs disappear.`,
+        ]},
+      ],
+      tips: [
+        { icon: '📞', title: 'Book in 30 Seconds', text: 'WhatsApp +917979877450. Pickup + destination + time. Confirmation under 2 mins. No app download.' },
+        { icon: '🏘️', title: 'East JSR Coverage', text: 'Sonari Colony, Kadma, Agrico, Jugsalai, Golmuri — east Jamshedpur areas other cabs overlook.' },
+        { icon: '✈️', title: 'Sonari Airport Pickup', text: 'Sonari Airstrip (IXW) is 3 km from our base — fastest cab pickup for Sonari airport arrivals.' },
+        { icon: '⭐', title: 'Real Reviews', text: 'Search RS Travel Jamshedpur on Google Maps to see real customer feedback from Sonari residents.' },
+      ],
+      conclusion: `From Sonari to all of Jharkhand — RS Travel delivers reliable, transparent cab service. Call or WhatsApp +917979877450 to book your next ride.`,
+    };
+  }
+
+  if (slug === 'cab-service-sonari-jamshedpur-guide') {
+    return {
+      category: 'Area Guide', readTime: '5 min read',
+      intro: `Sonari is one of Jamshedpur's most dynamic localities — home to Sonari Airport (IXW), Kadma township, Agrico, Jugsalai market, and Golmuri. RS Travel, based in Sonari since day one, offers the fastest cab service across all Sonari neighbourhoods and routes to Bistupur, Mango, Adityapur, and beyond.`,
+      sections: [
+        { heading: 'Sonari Localities — RS Travel Complete Coverage', paragraphs: [
+          `RS Travel covers every Sonari-area neighbourhood: Sonari Colony (Airport Road), Kadma (east Dimna Road), Agrico (central Sonari), Jugsalai (commercial hub), Golmuri (steel-adjacent township), Telco Colony (Tata Motors area). Fixed fares: Tatanagar Station Rs. 200, Bistupur Rs. 150, Mango Rs. 200, Adityapur Rs. 300, Sonari Airport IXW Rs. 100. No negotiation needed.`,
+          `Outstation from Sonari: Ranchi Rs. 1,499, Dhanbad Rs. 1,799, Bokaro Rs. 1,799, Kolkata Rs. 3,999, Deoghar Rs. 2,499, Patna Rs. 5,499, Puri Rs. 5,999. All-inclusive: toll, fuel, driver allowance.`,
+        ]},
+        { heading: 'Early Morning Outstation — RS Travel Specialty', paragraphs: [
+          `Our Sonari depot drivers are on standby from 4 AM for pre-booked outstation trips. Whether you have a 5 AM Ranchi Airport flight or a 6 AM temple departure for Deoghar, RS Travel will be at your Sonari address on time, every time.`,
+        ]},
+      ],
+      tips: [
+        { icon: '🏘️', title: 'Every Sonari Lane', text: 'Narrow lanes, residential interiors — we pick up from every Sonari street. No extra charges.' },
+        { icon: '✈️', title: 'Sonari Airport Fast Pick', text: 'IXW is our home turf. Fastest cab pickup in Jamshedpur. WhatsApp on landing.' },
+        { icon: '🌙', title: '4 AM Departures', text: 'Book the night before — driver confirmed and on time from 4 AM onwards.' },
+        { icon: '📞', title: 'One Number 24/7', text: '+917979877450 — book, track, contact. Always available.' },
+      ],
+      conclusion: `Sonari is RS Travel's home — and we serve it better than anyone. Local rides to outstation trips — call +917979877450. Pickup from your Sonari door in under 10 minutes.`,
+    };
+  }
+
+  if (slug === 'adityapur-industrial-area-cab-guide') {
+    return {
+      category: 'Corporate Travel', readTime: '4 min read',
+      intro: `Adityapur Industrial Area — one of Asia's largest industrial estates with 1,000+ factories employing 100,000+ workers — is adjacent to Jamshedpur. RS Travel provides dedicated corporate cab service across all Adityapur manufacturing zones, connecting workers to stations, executives to airports, and visitors to hotels.`,
+      sections: [
+        { heading: 'Adityapur Industrial Area — Zone-wise Coverage', paragraphs: [
+          `RS Travel covers all AIA zones: Phase 1 (Gamharia Gate, Light Engineering), Phase 2 (Heavy fabrication, auto components), Phase 3 (Chemical units), and the Adityapur Smart City extension. Key employers served: Mangalam Cement, Usha Martin, BOC India, SAIL ancillaries, Tata Small Car Plant (Gamharia), 200+ SMEs. Executive routes: Tatanagar Station Rs. 350, Ranchi Airport Rs. 1,799, Kolkata Rs. 4,299.`,
+          `Factory shift cab service: 6 AM, 2 PM, 10 PM shifts covered. Our Adityapur fleet includes 8-seater and 12-seater vehicles for small group pickups. Monthly corporate packages from Rs. 15,999 — dedicated driver, centralized GST billing, priority dispatch within 8 minutes.`,
+        ]},
+      ],
+      tips: [
+        { icon: '🏭', title: 'Gate Number Required', text: 'Specify factory gate and zone when booking — our Adityapur drivers avoid shift-change congestion at every entrance.' },
+        { icon: '🧾', title: 'GST Billing', text: 'Monthly consolidated GST invoice for Adityapur corporate accounts. Call +917979877450 to set up.' },
+        { icon: '🌙', title: '24/7 Night Shifts', text: '10 PM shift end, 2 AM emergency — RS Travel Adityapur fleet is always on call.' },
+        { icon: '👥', title: 'Group Vehicles', text: '8-seater Innova or 12-seater Force Traveller for worker group pickups at shift change.' },
+      ],
+      conclusion: `Adityapur Industrial Area never stops — and neither does RS Travel. Shift pickups, executive transfers, monthly corporate contracts — call +917979877450.`,
+    };
+  }
+
+  if (slug === 'rs-travel-corporate-cab-jamshedpur') {
+    return {
+      category: 'Corporate Travel', readTime: '4 min read',
+      intro: `RS Travel corporate cab service in Jamshedpur — built for the professional community with transparent billing, dedicated driver assignment, and 24/7 support from our Sonari headquarters. Serving Adityapur factories, Jugsalai businesses, and Jamshedpur corporate offices since 2018.`,
+      sections: [
+        { heading: "RS Travel Corporate Package — What's Included", paragraphs: [
+          `Monthly packages from Rs. 15,999: dedicated driver for your account (consistent face for your team), centralized monthly GST invoice, priority dispatch (cab within 8 minutes in Jamshedpur), and a direct WhatsApp line to your RS Travel account manager. Vehicle options: Sedan for solo executives, Ertiga for teams of 4-5, Innova for larger groups, Tempo Traveller (12 or 17 seater) for team outings and airport group pickups.`,
+          `Account setup takes one call: +917979877450. Company details, billing address, and usage requirements — account active within 24 hours. Monthly consolidated GST invoice by email, claimable as full corporate expense.`,
+        ]},
+      ],
+      tips: [
+        { icon: '📋', title: '24-Hour Account Setup', text: 'One call: +917979877450. Provide company details. Account active in 24 hours.' },
+        { icon: '🧾', title: 'GST Invoice', text: 'Monthly consolidated GST invoice by email. GSTIN available on request.' },
+        { icon: '⚡', title: 'Priority Dispatch', text: 'Corporate accounts get priority — cab within 8 minutes in Jamshedpur city area.' },
+        { icon: '📞', title: 'Direct Manager Line', text: 'Your RS Travel account manager WhatsApp is your direct booking line — no IVR queues.' },
+      ],
+      conclusion: `RS Travel handles the corporate logistics — you focus on business. Set up your account today: call +917979877450.`,
+    };
+  }
+
+  if (slug === 'jamshedpur-to-kolkata-road-trip-guide') {
+    return {
+      category: 'Road Trip Guide', readTime: '6 min read',
+      intro: `The Jamshedpur to Kolkata drive is Eastern India's most popular highway route — 260 km on NH-49 (NH-16/NH-60 merged corridor), approximately 5-6 hours through Jharkhand's mining belt into West Bengal. RS Travel covers this route daily with experienced drivers and all-inclusive transparent pricing.`,
+      sections: [
+        { heading: 'Route and Road Conditions 2026', paragraphs: [
+          `NH-49 via Dhanbad to Asansol to Durgapur to Kolkata: 260 km, 5-6 hours. Road quality: Excellent (Jamshedpur to Dhanbad, first 80 km, 4-lane NH-49), Good (Dhanbad to Asansol), Excellent (Durgapur Expressway + NH-19 to Kolkata). Total tolls Rs. 450-500 (covered in RS Travel all-inclusive fare). Approaching Kolkata via Dankuni-EM Bypass is faster than city centre — our drivers navigate Kolkata thoroughly.`,
+          `Dhanbad-Durgapur section has ongoing expansion works — expect 30-40 min slowdown near Durgapur barrage. Peak hour caution: Dankuni-Kolkata approach heavy 8-10 AM and 5-8 PM.`,
+        ]},
+        { heading: 'Highway Stops Worth Making', paragraphs: [
+          `Asansol (140 km from Jamshedpur): clean mid-point for lunch. Dhabas before Asansol toll are excellent for fresh Bengali-style fish curry. Durgapur (190 km): fuel up near Durgapur Steel Plant. The Durgapur Expressway after Durgapur is one of Eastern India's finest highway stretches — great cruising.`,
+        ]},
+        { heading: 'RS Travel Fares: Jamshedpur to Kolkata 2026', paragraphs: [
+          `One-way: Hatchback Rs. 3,799, Sedan Rs. 3,999, Ertiga Rs. 4,999, Innova Rs. 5,999, Innova Crysta Rs. 7,499. All-inclusive: NH toll, fuel, driver allowance. Round trip: 10% discount. Return pickup available from any Kolkata address — Salt Lake, Park Street, Howrah, Dum Dum airport area.`,
+        ]},
+      ],
+      tips: [
+        { icon: '⏰', title: 'Ideal Departure', text: 'Leave Jamshedpur 5-6 AM. Reach Kolkata by 11 AM before city traffic peaks. Perfect for hospital or business visits.' },
+        { icon: '🏙️', title: 'Kolkata Coverage', text: 'Howrah, NSCBI Airport, Salt Lake, Esplanade — our drivers are fully familiar with Kolkata roads.' },
+        { icon: '🏥', title: 'Medical Trips', text: 'JSR to Kolkata hospital (SSKM, Apollo Gleneagles, Fortis) — our most common route. On-time guaranteed.' },
+        { icon: '🛍️', title: 'Round Trip Value', text: 'Shopping trip to Kolkata? Book round trip — save 10% and guaranteed return transport.' },
+      ],
+      conclusion: `Jamshedpur to Kolkata in 5-6 hours — smooth, comfortable, all-inclusive. Call or WhatsApp +917979877450. Fares from Rs. 3,799, available 24/7.`,
+    };
+  }
+
+  if (slug === 'deoghar-baidyanath-darshan-cab-guide') {
+    return {
+      category: 'Pilgrimage Guide', readTime: '5 min read',
+      intro: `Deoghar — home to Baidyanath Jyotirlinga, one of India's 12 sacred Jyotirlingas — is Jharkhand's most important pilgrimage destination. From Jamshedpur (245 km), lakhs of devotees make this holy journey every year. RS Travel facilitates these sacred travels with experienced drivers, respectful service, and full 24/7 night departure coverage.`,
+      sections: [
+        { heading: 'Jamshedpur to Deoghar — RS Travel Route Guide 2026', paragraphs: [
+          `Recommended route: Jamshedpur via NH-33 to Hazaribagh to Giridih to Deoghar — 245 km, 5-6 hours. Best road quality and safety on this route. RS Travel fares: Hatchback Rs. 2,599, Sedan Rs. 3,299, Ertiga Rs. 3,999, Innova Rs. 4,799, Innova Crysta Rs. 5,499. All-inclusive: toll, fuel, driver allowance. Same-day round trip: 10% discount.`,
+          `Baidyanath Temple opens at 4:00 AM. For best darshan experience without long queues, depart Jamshedpur by 10:30-11 PM previous night — RS Travel 24/7 night departure service, no extra night charges.`,
+        ]},
+        { heading: 'Shravan Mela — Special RS Travel Arrangements', paragraphs: [
+          `Shravan (July-August) peak season: traffic at Deoghar peaks 7 AM-3 PM. RS Travel strongly recommends 2-3 AM departure from Jamshedpur during Shravan. Our drivers have extensive Shravan Mela navigation experience and know all official diversions. Custom pilgrimage packages available: Baidyanath Temple + Naulakha Temple + Trikuta Parvat in one comprehensive day trip. Tempo Traveller available for large family groups (12 or 17 seater).`,
+        ]},
+      ],
+      tips: [
+        { icon: '🛕', title: 'Night Departure for Darshan', text: 'Leave Jamshedpur at 10:30-11 PM. Arrive Deoghar 4-4:30 AM. Join Shringar Aarti queue. RS Travel 24/7 — night fully covered.' },
+        { icon: '⏰', title: 'Shravan Traffic Warning', text: 'July-August: leave before 3 AM to beat Deoghar traffic. Our drivers know every official Shravan diversion.' },
+        { icon: '👨‍👩‍👧‍👦', title: 'Family Group Options', text: 'Family of 4-6: Innova (best comfort for pilgrimage). Group of 7-12: Tempo Traveller.' },
+        { icon: '🙏', title: 'Respectful Pilgrimage Service', text: 'RS Travel drivers on Deoghar routes observe temple protocols — patient, respectful, familiar with temple surroundings.' },
+      ],
+      conclusion: `Baba Baidyanath ki jai. RS Travel makes your Deoghar darshan seamless from Jamshedpur to temple gate. Call +917979877450. Har Har Mahadev.`,
+    };
+  }
+
+
   // Default fallback for any unmatched blog slugs
   return {
     category: 'Travel Guide',

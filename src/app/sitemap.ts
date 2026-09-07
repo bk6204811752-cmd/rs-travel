@@ -1,4 +1,4 @@
-import { MetadataRoute } from 'next';
+﻿import { MetadataRoute } from 'next';
 import { jharkhandCities } from '@/lib/cities';
 import { services } from '@/lib/services';
 import { fleet } from '@/lib/fleet';
@@ -7,23 +7,23 @@ import { localRoutes } from '@/lib/localRoutes';
 import { getAllBlogSlugs } from '@/lib/blogSlugs';
 
 /**
- * Sitemap generator for rstravelsjsr.com — optimized for Google crawl budget.
+ * Sitemap generator for rstravelsjsr.com â€” optimized for Google crawl budget.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.rstravelsjsr.com';
 
-  // Fixed dates — only update these when you ACTUALLY update content
-  const HOMEPAGE_DATE = '2026-08-03';
-  const CITY_DATE = '2026-08-03';
-  const ROUTE_DATE = '2026-08-03';
-  const SERVICE_DATE = '2026-08-03';
-  const FLEET_DATE = '2026-08-03';
-  const BLOG_DATE = '2026-08-01';
-  const STATIC_DATE = '2026-08-03';
+  // Fixed dates â€” only update these when you ACTUALLY update content
+  const HOMEPAGE_DATE = '2026-09-07';
+  const CITY_DATE = '2026-09-07';
+  const ROUTE_DATE = '2026-09-07';
+  const SERVICE_DATE = '2026-09-07';
+  const FLEET_DATE = '2026-09-07';
+  const BLOG_DATE = '2026-09-07';
+  const STATIC_DATE = '2026-09-07';
 
   const urls: MetadataRoute.Sitemap = [];
 
-  // ── Homepage ──
+  // â”€â”€ Homepage â”€â”€
   urls.push({
     url: baseUrl,
     lastModified: HOMEPAGE_DATE,
@@ -31,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 1.0,
   });
 
-  // ── Static Pages ──
+  // â”€â”€ Static Pages â”€â”€
   ['about', 'contact', 'faq', 'fare-chart'].forEach(page => {
     urls.push({
       url: `${baseUrl}/${page}`,
@@ -41,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // ── City Hub Pages (Tier-1 & Tier-2 only — Tier-3 are noindex/thin content) ──
+  // â”€â”€ City Hub Pages (Tier-1 & Tier-2 only â€” Tier-3 are noindex/thin content) â”€â”€
   const topCitySlugs = ['jamshedpur', 'ranchi', 'dhanbad', 'bokaro'];
   jharkhandCities.filter(c => c.tier <= 2).forEach(city => {
     const isTopCity = topCitySlugs.includes(city.slug);
@@ -53,7 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // ── Top Route Pages (highest transactional value) ──
+  // â”€â”€ Top Route Pages (highest transactional value) â”€â”€
   const topRouteKeys = new Set([
     'jamshedpur-to-ranchi', 'ranchi-to-jamshedpur',
     'jamshedpur-to-kolkata', 'kolkata-to-jamshedpur',
@@ -78,7 +78,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // ── Service × City Pages (only tier 1 & 2 cities to save crawl budget) ──
+  // â”€â”€ Service Ã— City Pages (only tier 1 & 2 cities to save crawl budget) â”€â”€
   const serviceCities = jharkhandCities.filter(c => c.tier <= 2);
   serviceCities.forEach(city => {
     services.forEach(service => {
@@ -91,7 +91,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // ── Fleet × City Pages (only tier 1 cities) ──
+  // â”€â”€ Fleet Ã— City Pages (only tier 1 cities) â”€â”€
   const fleetCities = jharkhandCities.filter(c => c.tier === 1);
   fleetCities.forEach(city => {
     fleet.forEach(vehicle => {
@@ -104,7 +104,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // ── Local Route Pages ──
+  // â”€â”€ Local Route Pages â”€â”€
   localRoutes.forEach(route => {
     urls.push({
       url: `${baseUrl}/local-taxi-${route.city}/${route.slug}`,
@@ -114,7 +114,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // ── Blog Articles ──
+  // â”€â”€ Blog Articles â”€â”€
   getAllBlogSlugs().forEach(slug => {
     urls.push({
       url: `${baseUrl}/blog/${slug}`,
@@ -126,3 +126,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return urls;
 }
+

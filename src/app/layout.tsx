@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+﻿import type { Metadata, Viewport } from "next";
 import Image from "next/image";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -22,32 +22,32 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Cab Service Jamshedpur | ₹999 | RS Travel",
-    template: "%s | RS Travel Jamshedpur",
+    default: "Cab Service Jamshedpur | â‚¹999 | RS Travel",
+    template: "%s | RS Travel",
   },
   description:
-    "#1 cab service in Jamshedpur (Sonari) ✅ AC cabs ₹999 onwards ✅ 24/7 ✅ Police-verified drivers ✅ GPS tracked ✅ 30,000+ happy customers. Outstation, airport & local taxi. ☎ +917979877450",
+    "#1 cab service in Jamshedpur (Sonari) âœ… AC cabs â‚¹999 onwards âœ… 24/7 âœ… Police-verified drivers âœ… GPS tracked âœ… 30,000+ happy customers. Outstation, airport & local taxi. â˜Ž +917979877450",
   metadataBase: new URL("https://www.rstravelsjsr.com"),
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://www.rstravelsjsr.com",
     siteName: "RS Travel",
-    title: "RS Travel — #1 Cab Service Jamshedpur (Sonari) & Jharkhand",
-    description: "Book reliable AC cab service in Jamshedpur (Sonari), Ranchi, Dhanbad, Bokaro & 15+ Jharkhand cities. Police-verified drivers, fixed pricing, 24/7 availability. Jamshedpur to Ranchi cab ₹2,499. 30,000+ happy customers. Call +917979877450.",
+    title: "RS Travel â€” #1 Cab Service Jamshedpur (Sonari) & Jharkhand",
+    description: "Book reliable AC cab service in Jamshedpur (Sonari), Ranchi, Dhanbad, Bokaro & 15+ Jharkhand cities. Police-verified drivers, fixed pricing, 24/7 availability. Jamshedpur to Ranchi cab â‚¹2,499. 30,000+ happy customers. Call +917979877450.",
     images: [
       {
         url: "https://www.rstravelsjsr.com/background/rsbg1.webp",
         width: 1200,
         height: 630,
-        alt: "RS Travel — Best Cab Service in Jamshedpur Sonari & Jharkhand",
+        alt: "RS Travel â€” Best Cab Service in Jamshedpur Sonari & Jharkhand",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "RS Travel — Cab Service Jamshedpur ₹999",
-    description: "Book AC cab in Jamshedpur (Sonari), Ranchi, Dhanbad, Bokaro. 24/7, verified drivers, ₹11/km. 30K+ happy rides. Call +917979877450.",
+    title: "RS Travel â€” Cab Service Jamshedpur â‚¹999",
+    description: "Book AC cab in Jamshedpur (Sonari), Ranchi, Dhanbad, Bokaro. 24/7, verified drivers, â‚¹11/km. 30K+ happy rides. Call +917979877450.",
     images: ["https://www.rstravelsjsr.com/background/rsbg1.webp"],
   },
   robots: {
@@ -101,7 +101,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable}`} suppressHydrationWarning>
       <head>
-        {/* ===== FAVICONS — Explicit tags for Google Search favicon crawling ===== */}
+        {/* ===== FAVICONS â€” Explicit tags for Google Search favicon crawling ===== */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -137,7 +137,7 @@ export default function RootLayout({
               email: "info@rstravels.com",
               foundingDate: "2018",
               description: "Premier cab service in Jamshedpur (Sonari), Jharkhand. Trusted since 2018 with 50+ verified cabs, police-verified drivers, GPS tracking, and transparent pricing. Available 24/7 for local taxi, outstation cab, airport transfer, and corporate car rental across Jharkhand and beyond.",
-              slogan: "Jamshedpur's Reliable Cab Service — Every Ride, On Time",
+              slogan: "Jamshedpur's Reliable Cab Service â€” Every Ride, On Time",
               knowsAbout: ["Cab Service", "Taxi Booking", "Car Rental", "Airport Transfer", "Outstation Cab", "Local Taxi"],
               knowsLanguage: ["Hindi", "English"],
               address: {
@@ -172,6 +172,13 @@ export default function RootLayout({
                 { "@type": "State", name: "West Bengal" },
                 { "@type": "GeoCircle", geoMidpoint: { "@type": "GeoCoordinates", latitude: 22.8046, longitude: 86.2029 }, geoRadius: "300000" },
               ],
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "4.9",
+                ratingCount: "1850",
+                bestRating: "5",
+                worstRating: "1",
+              },
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
                 name: "Cab Services in Jamshedpur & Jharkhand by RS Travel",
@@ -185,7 +192,7 @@ export default function RootLayout({
                   { "@type": "Offer", itemOffered: { "@type": "Service", name: "Wedding Car Rental", description: "Decorated wedding cars with professional chauffeur" }, price: "4999", priceCurrency: "INR" },
                 ],
               },
-              priceRange: "₹999 - ₹25,000",
+              priceRange: "â‚¹999 - â‚¹25,000",
               currenciesAccepted: "INR",
               paymentAccepted: "Cash, UPI, Google Pay, PhonePe, Paytm, Credit Card, Debit Card",
               openingHoursSpecification: {
@@ -282,9 +289,9 @@ export default function RootLayout({
                   airport transfers, and corporate travel.
                 </p>
                 <p style={{ marginTop: '0.75rem' }}>
-                  📍 Sonari, Jamshedpur, Jharkhand – 832101<br />
-                  📞 +91 79798 77450<br />
-                  ✉️ info@rstravels.com
+                  ðŸ“ Sonari, Jamshedpur, Jharkhand â€“ 832101<br />
+                  ðŸ“ž +91 79798 77450<br />
+                  âœ‰ï¸ info@rstravels.com
                 </p>
                 {/* Social Media Links */}
                 <div style={{ display: 'flex', gap: '0.75rem', marginTop: '1rem', flexWrap: 'wrap' }}>
@@ -297,7 +304,7 @@ export default function RootLayout({
                 </div>
               </div>
               <div className="footer-section">
-                <h3>🏙️ Our Cities</h3>
+                <h3>ðŸ™ï¸ Our Cities</h3>
                 <ul className="footer-links">
                   <li><a href="/cab-service-jamshedpur">Cab Jamshedpur</a></li>
                   <li><a href="/cab-service-ranchi">Cab Ranchi</a></li>
@@ -312,7 +319,7 @@ export default function RootLayout({
                 </ul>
               </div>
               <div className="footer-section">
-                <h3>🚗 Services</h3>
+                <h3>ðŸš— Services</h3>
                 <ul className="footer-links">
                   <li><a href="/jamshedpur/one-way-cab">One Way Cab</a></li>
                   <li><a href="/jamshedpur/round-trip-cab">Round Trip Cab</a></li>
@@ -322,29 +329,29 @@ export default function RootLayout({
                   <li><a href="/jamshedpur/wedding-cab">Wedding Cab</a></li>
                   <li><a href="/jamshedpur/corporate-cab">Corporate Cab</a></li>
                   <li><a href="/jamshedpur/pilgrimage-cab">Pilgrimage Cab</a></li>
-                  <li><a href="/fare-chart">📊 Fare Chart</a></li>
-                  <li><a href="/faq">❓ FAQ</a></li>
+                  <li><a href="/fare-chart">ðŸ“Š Fare Chart</a></li>
+                  <li><a href="/faq">â“ FAQ</a></li>
                 </ul>
               </div>
               <div className="footer-section">
-                <h3>🛣️ Popular Routes</h3>
+                <h3>ðŸ›£ï¸ Popular Routes</h3>
                 <ul className="footer-links">
-                  <li><a href="/jamshedpur-to-kolkata-cab">Jamshedpur → Kolkata</a></li>
-                  <li><a href="/jamshedpur-to-ranchi-cab">Jamshedpur → Ranchi</a></li>
-                  <li><a href="/ranchi-to-kolkata-cab">Ranchi → Kolkata</a></li>
-                  <li><a href="/dhanbad-to-kolkata-cab">Dhanbad → Kolkata</a></li>
-                  <li><a href="/bokaro-to-ranchi-cab">Bokaro → Ranchi</a></li>
-                  <li><a href="/jamshedpur-to-puri-cab">Jamshedpur → Puri</a></li>
-                  <li><a href="/ranchi-to-patna-cab">Ranchi → Patna</a></li>
-                  <li><a href="/jamshedpur-to-deoghar-cab">Jamshedpur → Deoghar</a></li>
-                  <li><a href="/dhanbad-to-ranchi-cab">Dhanbad → Ranchi</a></li>
+                  <li><a href="/jamshedpur-to-kolkata-cab">Jamshedpur â†’ Kolkata</a></li>
+                  <li><a href="/jamshedpur-to-ranchi-cab">Jamshedpur â†’ Ranchi</a></li>
+                  <li><a href="/ranchi-to-kolkata-cab">Ranchi â†’ Kolkata</a></li>
+                  <li><a href="/dhanbad-to-kolkata-cab">Dhanbad â†’ Kolkata</a></li>
+                  <li><a href="/bokaro-to-ranchi-cab">Bokaro â†’ Ranchi</a></li>
+                  <li><a href="/jamshedpur-to-puri-cab">Jamshedpur â†’ Puri</a></li>
+                  <li><a href="/ranchi-to-patna-cab">Ranchi â†’ Patna</a></li>
+                  <li><a href="/jamshedpur-to-deoghar-cab">Jamshedpur â†’ Deoghar</a></li>
+                  <li><a href="/dhanbad-to-ranchi-cab">Dhanbad â†’ Ranchi</a></li>
                 </ul>
               </div>
             </div>
 
             <div className="footer-bottom">
-              <p>© {new Date().getFullYear()} RS Travel. All rights reserved. | Jamshedpur&apos;s Trusted Cab Service Since 2018</p>
-              <p style={{ marginTop: '0.25rem' }}>📞 +91 79798 77450 | ✉️ info@rstravels.com | 🌐 rstravelsjsr.com | 📍 Sonari, Jamshedpur</p>
+              <p>Â© {new Date().getFullYear()} RS Travel. All rights reserved. | Jamshedpur&apos;s Trusted Cab Service Since 2018</p>
+              <p style={{ marginTop: '0.25rem' }}>ðŸ“ž +91 79798 77450 | âœ‰ï¸ info@rstravels.com | ðŸŒ rstravelsjsr.com | ðŸ“ Sonari, Jamshedpur</p>
               <p style={{ marginTop: '0.5rem', fontSize: '0.85rem', opacity: 0.9 }}>
                 Developed by{' '}
                 <a
@@ -392,3 +399,4 @@ export default function RootLayout({
     </html>
   );
 }
+
